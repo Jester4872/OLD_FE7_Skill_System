@@ -1,0 +1,24 @@
+//FE7 Vantage
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $28FB8
+callHack_r3(Vantage)
+
+POP
+
+ALIGN 4
+Vantage:
+#incbin "Vantage.dmp"

@@ -1,0 +1,24 @@
+//FE7 Lifetaker
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $17424
+callHack_r3(Lifetaker)
+
+POP
+
+ALIGN 4
+Lifetaker:
+#incbin "Lifetaker.dmp"

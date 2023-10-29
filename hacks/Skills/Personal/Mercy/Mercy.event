@@ -1,0 +1,24 @@
+//FE7 Mercy
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $29450
+callHack_r3(Mercy)
+
+POP
+
+ALIGN 4
+Mercy:
+#incbin "Mercy.dmp"

@@ -1,0 +1,58 @@
+#include "EAstdlib.event"
+
+#ifndef FreeSpace
+    #define FreeSpace 0xD00000
+    ORG FreeSpace
+#endif
+
+//ASM
+//#include "hacks/AlternativeWeaponModifiers/AlternativeWeaponModifiers.event"
+//MESSAGE installed AlternativeWeaponModifiers
+
+//#include "hacks/AlternativeBarrierStaffs/AlternativeBarrierStaffs.event"
+//MESSAGE installed AlternativeBarrierStaffs
+
+//#include "hacks/Skills/Personal/Paragon/Paragon.event"
+//MESSAGE installed Paragon
+
+//#include "hacks/Skills/Personal/Lifetaker/Lifetaker.event"
+//MESSAGE installed Lifetaker
+
+//#include "hacks/Skills/Personal/Galeforce/Galeforce.event"
+//MESSAGE installed Galeforce
+
+//#include "hacks/Skills/Personal/GoldDigger/GoldDigger.event"
+//MESSAGE installed GoldDigger
+
+//#include "hacks/Skills/Personal/Vantage/Vantage.event"
+//MESSAGE installed Vantage
+
+//#include "hacks/Skills/Personal/Momentum/Momentum.event"
+//MESSAGE installed Momentum
+
+//#include "hacks/Skills/Personal/Fortune/Fortune.event"
+//MESSAGE installed Fortune
+
+//#include "hacks/Skills/Weapon/DeathBlow/DeathBlow.event"
+//MESSAGE installed DeathBlow
+
+//#include "hacks/Skills/Personal/SacaenHeritage/SacaenHeritage.event"
+//MESSAGE installed SacaenHeritage
+
+//#include "hacks/Skills/Personal/AlertStance/AlertStanceSetBit.event"
+//MESSAGE installed AlertStance - SetBit
+
+//#include "hacks/Skills/Personal/AlertStance/AlertStanceApply.event"
+//MESSAGE installed AlertStance - Apply
+
+//#include "hacks/Skills/Personal/DoubleLion/DoubleLion.event"
+//MESSAGE installed DoubleLion
+
+//#include "hacks/Skills/Personal/Armsthrift/Armsthrift.event"
+//MESSAGE installed Armsthrift
+
+//#include "hacks/Skills/Personal/StaffRange+1/StaffRange+1.event"
+//MESSAGE installed StaffRange+1
+
+#include "hacks/Skills/Personal/Mercy/Mercy.event"
+MESSAGE installed Mercy
