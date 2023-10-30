@@ -54,5 +54,8 @@
 //#include "hacks/Skills/Personal/StaffRange+1/StaffRange+1.event"
 //MESSAGE installed StaffRange+1
 
-#include "hacks/Skills/Personal/Mercy/Mercy.event"
-MESSAGE installed Mercy
+//#include "hacks/Skills/Personal/Mercy/Mercy.event"
+//MESSAGE installed Mercy
+
+#include "hacks/Skills/Personal/HPPlus5/HPPlus5.event"
+MESSAGE installed HPPlus5
