@@ -63,5 +63,8 @@
 //#include "hacks/Skills/Personal/PowerPlus3/PowerPlus3.event"
 //MESSAGE installed PowerPlus3
 
-#include "hacks/Skills/Personal/MovePlus2/MovePlus2.event"
-MESSAGE installed MovePlus2Display and MovePlus2Field
+//#include "hacks/Skills/Personal/MovePlus2/MovePlus2.event"
+//MESSAGE installed MovePlus2Display and MovePlus2Field
+
+#include "hacks/Skills/Personal/Acrobat/Acrobat.event"
+MESSAGE installed Acrobat
