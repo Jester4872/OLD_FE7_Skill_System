@@ -60,5 +60,8 @@
 //#include "hacks/Skills/Personal/HPPlus5/HPPlus5.event"
 //MESSAGE installed HPPlus5
 
-#include "hacks/Skills/Personal/PowerPlus3/PowerPlus3.event"
-MESSAGE installed PowerPlus3
+//#include "hacks/Skills/Personal/PowerPlus3/PowerPlus3.event"
+//MESSAGE installed PowerPlus3
+
+#include "hacks/Skills/Personal/MovePlus2/MovePlus2.event"
+MESSAGE installed MovePlus2Display and MovePlus2Field
