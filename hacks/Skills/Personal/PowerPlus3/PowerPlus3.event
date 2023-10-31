@@ -1,0 +1,24 @@
+//FE7 Power + 3
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $18AE0
+callHack_r3(PowerPlus3)
+
+POP
+
+ALIGN 4
+PowerPlus3:
+#incbin "PowerPlus3.dmp"

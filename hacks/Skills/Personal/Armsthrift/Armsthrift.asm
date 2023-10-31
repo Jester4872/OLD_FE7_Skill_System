@@ -29,13 +29,13 @@
 .endm
 
 push    {r1,r3}             @push the first three registers so we can use them
-ldr		r1,[r5]				            @load the pointer to character data	
-ldrb	r1,[r1,#0x4]		         @load the character ID byte
-cmp		r1, #0x03			           @compare the loaded character ID byte to Lyn's ID
+ldr		r1,[r5]				@load the pointer to character data	
+ldrb	r1,[r1,#0x4]		@load the character ID byte
+cmp		r1, #0x03			@compare the loaded character ID byte to Lyn's ID
 beq     LoadAttacker        @branch to and calculate whether to apply skill if Lyn is active
-ldr		r1,[r7]				            @load the pointer to character data	
-ldrb	r1,[r1,#0x4]		         @load the character ID byte
-cmp		r1, #0x03			           @compare the loaded character ID byte to Lyn's ID
+ldr		r1,[r7]				@load the pointer to character data	
+ldrb	r1,[r1,#0x4]		@load the character ID byte
+cmp		r1, #0x03			@compare the loaded character ID byte to Lyn's ID
 beq     LoadDefender        @branch and calculate whether to apply skill if Lyn is active
 b       End                 @branch to the end
 
@@ -53,7 +53,7 @@ blh     GetRandomNumber, r0 @get a random number between 0-100
 mov     r1,r0               @move the random number to register 1
 mov     r3,#0x19            @get luck byte
 ldrb    r2,[r2,r3]          @load luck byte
-lsl     r2,r2,#4            @luck * 16  
+lsl     r2,r2,#4            @luck * 16  (2^4)
 pop     {r0}                @restore the equipped weapon and uses after battle short
 cmp     r2,r1               @compare the random number against the doubled luck
 bge     ApplyArmsthrift     @apply Armsthrift if luck is greater than or equal to the random number

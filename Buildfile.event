@@ -57,5 +57,8 @@
 //#include "hacks/Skills/Personal/Mercy/Mercy.event"
 //MESSAGE installed Mercy
 
-#include "hacks/Skills/Personal/HPPlus5/HPPlus5.event"
-MESSAGE installed HPPlus5
+//#include "hacks/Skills/Personal/HPPlus5/HPPlus5.event"
+//MESSAGE installed HPPlus5
+
+#include "hacks/Skills/Personal/PowerPlus3/PowerPlus3.event"
+MESSAGE installed PowerPlus3
