@@ -66,5 +66,8 @@
 //#include "hacks/Skills/Personal/MovePlus2/MovePlus2.event"
 //MESSAGE installed MovePlus2Display and MovePlus2Field
 
-#include "hacks/Skills/Personal/Acrobat/Acrobat.event"
-MESSAGE installed Acrobat
+//#include "hacks/Skills/Personal/Acrobat/Acrobat.event"
+//MESSAGE installed Acrobat
+
+#include "hacks/Skills/Personal/Axebreaker/Axebreaker.event"
+MESSAGE installed Axebreaker

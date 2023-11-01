@@ -20,43 +20,102 @@
 
 push    {r14}
 push    {r0-r3}
-ldr		r0,=#0x202BBF8	    @load chapter struct
-mov		r1,#0xF			    @get turn phase byte
-ldrb	r0,[r0,r1]		    @load turn phase
-cmp		r0,#0x0			    @player phase byte for comparison
-beq		CheckCharacterAtk	@if player phase, navigate to CheckCharacterAtk
-cmp		r0,#0x80		    @enemy phase byte for comparison
-beq		CheckCharacterDef   @if enemy phase, load CheckCharacterDef
+ldr		r0,=#0x202BBF8	        @load chapter struct
+mov		r1,#0xF			        @get turn phase byte
+ldrb	r0,[r0,r1]		        @load turn phase
+cmp		r0,#0x0			        @player phase byte for comparison
+beq		CheckBitFlag    	    @if player phase, navigate to CheckBitFlag
+cmp		r0,#0x80		        @enemy phase byte for comparison
+beq		ResetBitFlag            @if enemy phase, load ResetBitFlag
 
 CheckCharacterAtk:
-ldr		r3,=#0x203A3F0	    @load the attacker struct
-ldr		r2,[r3,#0x0]	    @load pointer to character data
-ldrb	r2,[r2,#0x4]	    @load character ID byte
-cmp		r2,#0x03 		    @compare the loaded character ID byte to Lyn's ID
-beq		CheckEnemyWeaponAtk @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponAtk
-b 		End
+    ldr		r3,=#0x203A3F0	    @load the attacker struct
+    ldr		r2,[r3,#0x0]	    @load pointer to character data
+    ldrb	r2,[r2,#0x4]	    @load character ID byte
+    cmp		r2,#0x03 		    @compare the loaded character ID byte to Lyn's ID
+    beq		CheckEnemyWeaponDef @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponAtk
+    b 		End
 
 CheckCharacterDef:
-ldr		r3,=#0x203A470	    @load the attacker struct
-ldr		r2,[r3,#0x0]	    @load pointer to character data
-ldrb	r2,[r2,#0x4]	    @load character ID byte
-cmp		r2,#0x03 		    @compare the loaded character ID byte to Lyn's ID
-beq		CheckEnemyWeaponDef @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponDef
-b 		End
+    ldr		r3,=#0x203A470	    @load the attacker struct
+    ldr		r2,[r3,#0x0]	    @load pointer to character data
+    ldrb	r2,[r2,#0x4]	    @load character ID byte
+    cmp		r2,#0x03 		    @compare the loaded character ID byte to Lyn's ID
+    beq		CheckEnemyWeaponAtk @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponDef
+    b 		End
 
 CheckEnemyWeaponAtk:
-CheckEnemyWeaponDef:
+    ldr     r3,=#0x203A3F0      @the enemy's stats are within the attacker struct
+    mov     r2,#0x50
+    ldrb	r2,[r3,r2]	        @load the weapon type
+    cmp     r2,#0x2             @is the enemy weapon type an axe?
+    beq     ApplyAxebreakerDef  @apply Axebreaker if so
+    b       End                 @otherwise branch to the end
 
-ApplyAxebreaker:
-b       End
+CheckEnemyWeaponDef:
+    ldr     r3,=#0x203A470      @the enemy's stats are within the defender struct
+    mov     r2,#0x50
+    ldrb	r2,[r3,r2]	        @load the weapon type
+    cmp     r2,#0x2             @is the enemy weapon type an axe?
+    beq     ApplyAxebreakerAtk  @apply Axebreaker if so
+    b       End                 @otherwise branch to the end
+
+ApplyAxebreakerAtk:
+    ldr     r3,=#0x203A3F0      @the player's stats are within the attacker struct
+    mov     r1,#0x60
+    ldrb	r2,[r3,r1]	        @load the weapon type
+    add     r2,#0x14            @add 20 to hit rate
+    strb    r2,[r3,r1]          @store the new hit rate
+    mov     r1,#0x62
+    ldrh    r2,[r3,r1]          @load avoid rate
+    add     r2,#0x14            @add 20 to avoid rate
+    strb    r2,[r3,r1]          @store the new avoid rate
+    mov     r1,#0x1C            @get the byte for the ballista data
+    mov     r2,#0xFF            @get the bitflag value to set that byte to
+    strb    r2,[r3,r1]          @store the bitflag (so we know not to apply the skill twice in succession)
+    b       SetBitFlag
+
+ApplyAxebreakerDef:
+    ldr     r3,=#0x203A470      @the player's stats are within the defender struct
+    mov     r1,#0x60
+    ldrh    r2,[r3,r1]          @load hit rate
+    add     r2,#0x14            @add 20 to hit rate
+    strb    r2,[r3,r1]          @store the new hit rate
+    mov     r1,#0x62
+    ldrh    r2,[r3,r1]          @load avoid rate
+    add     r2,#0x14            @add 20 to avoid rate
+    strb    r2,[r3,r1]          @store the new avoid rate
+    b       End
+
+SetBitFlag:
+    ldr     r3,=#0x203A3F0
+    mov     r1,#0x1C            @get the ballista data byte
+    mov     r2,#0xFF            @get the value to set the bitflag too (when Axebreaker is applied)
+    strb    r2,[r3,r1]
+    b       End
+
+CheckBitFlag:
+    ldr     r3,=#0x203A3F0
+    mov     r1,#0x1C            @get the ballista data byte
+    ldrb    r2,[r3,r1]          @load the value of the bitflag
+    cmp     r2,#0xFF            @check the value of the bitflag
+    bne     CheckCharacterAtk   @check the character id now
+    b       End                 @otherwise branch to the end
+
+ResetBitFlag:
+    ldr     r3,=#0x203A470
+    mov     r1,#0x1C            @get the ballista data byte
+    mov     r2,#0x00            @get the value to set the bitflag too (when Axebreaker is applied)
+    strb    r2,[r3,r1]
+    b       CheckCharacterDef   @check the identity of the defending character
 
 End:
-push    {r0-r3}
-ldr     r1,[r4,#0x4]
-ldr     r0,[r0,#0x28]
-ldr     r1,[r1,#0x28]
-orr     r0,r1
-mov     r1,#0x40
-and     r0,
-pop     {r2}
-bx      r2
+    pop     {r0-r3}             
+    ldr     r1,[r4,#0x4]
+    ldr     r0,[r0,#0x28]
+    ldr     r1,[r1,#0x28]
+    orr     r0,r1
+    mov     r1,#0x40
+    and     r0,r1
+    pop     {r4}
+    bx      r4
