@@ -1,6 +1,6 @@
 .thumb
 
-@called from #0x8029F64
+@called from 29F64
 @r0=#0x0000011
 @r1=#0x8029F65
 @r2=#0x8BE0204

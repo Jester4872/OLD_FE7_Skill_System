@@ -27,20 +27,20 @@ and 	r2, r3				@trim the trailing bits of the allegiance value
 cmp 	r1, #0x80			@is the attacker an enemy?
 beq 	FortuneAttacker		@Apply Fortune to the enemy if true
 cmp 	r2, #0x80			@is the defender an enemy?
-beq 	FortuneDefender		@apply fortune to the enemy if true
+beq 	FortuneDefender		@apply Fortune to the enemy if true
 
 FortuneAttacker:
 mov 	r1,r4
-add 	r1,#0x66 
-mov 	r3,#0
-strb 	r3,[r1]
+add 	r1,#0x66            @get the critical byte
+mov 	r3,#0               @get the value to set the byte to (0)
+strb 	r3,[r1]             @set the new critical value for the enemy
 b 		End
 
 FortuneDefender:
 mov 	r2,r5
-add 	r2,#0x66 
-mov 	r3,#0
-strb 	r3,[r2]
+add 	r2,#0x66            @get the critical byte
+mov 	r3,#0               @get the value to set the byte to (0)
+strb 	r3,[r2]             @set the new critical value for the enemy
 b 		End
 
 End:
