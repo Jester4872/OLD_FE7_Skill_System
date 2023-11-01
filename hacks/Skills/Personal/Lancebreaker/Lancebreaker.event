@@ -1,0 +1,24 @@
+//FE7 Lancebreaker
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $28D20
+callHack_r3(Lancebreaker)
+
+POP
+
+ALIGN 4
+Lancebreaker:
+#incbin "Lancebreaker.dmp"

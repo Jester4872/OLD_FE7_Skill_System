@@ -18,6 +18,7 @@ Armsthrift
 #28D20
 Axebreaker
 Swordbreaker
+Lancebreaker
 Fortune
 
 #29128
