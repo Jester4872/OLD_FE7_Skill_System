@@ -19,6 +19,7 @@ Armsthrift
 Axebreaker
 Swordbreaker
 Lancebreaker
+Bowbreaker
 Fortune
 
 #29128

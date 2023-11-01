@@ -75,5 +75,8 @@
 //#include "hacks/Skills/Personal/Swordbreaker/Swordbreaker.event"
 //MESSAGE installed Swordbreaker
 
-#include "hacks/Skills/Personal/Lancebreaker/Lancebreaker.event"
-MESSAGE installed Lancebreaker
+//#include "hacks/Skills/Personal/Lancebreaker/Lancebreaker.event"
+//MESSAGE installed Lancebreaker
+
+#include "hacks/Skills/Personal/Bowbreaker/Bowbreaker.event"
+MESSAGE installed Bowbreaker
