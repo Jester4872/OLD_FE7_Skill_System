@@ -15,6 +15,9 @@ AlertStanceSetBit
 #294B8
 Armsthrift
 
+#29284
+Flare
+
 #28D20
 Axebreaker
 Swordbreaker

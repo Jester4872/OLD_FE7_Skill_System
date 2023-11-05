@@ -5,7 +5,6 @@
     ORG FreeSpace
 #endif
 
-//ASM
 //#include "hacks/AlternativeWeaponModifiers/AlternativeWeaponModifiers.event"
 //MESSAGE installed AlternativeWeaponModifiers
 
@@ -78,5 +77,16 @@
 //#include "hacks/Skills/Personal/Lancebreaker/Lancebreaker.event"
 //MESSAGE installed Lancebreaker
 
-#include "hacks/Skills/Personal/Bowbreaker/Bowbreaker.event"
-MESSAGE installed Bowbreaker
+//#include "hacks/Skills/Personal/Bowbreaker/Bowbreaker.event"
+//MESSAGE installed Bowbreaker
+
+//#include "hacks/Skills/Personal/LuckySeven/LuckySeven.event"                                  
+//MESSAGE installed LuckySeven 
+
+//#include "hacks/Skills/Personal/LuckySeven/BoostUnitSkill/BoostUnitSkill.event"                                  
+//MESSAGE installed BoostUnitSkill
+
+#include "hacks/Skills/Personal/Flare/Flare.event"                                  
+MESSAGE installed Flare
+
+                                                                                                                                                                                    
