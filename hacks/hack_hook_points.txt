@@ -18,6 +18,9 @@ Armsthrift
 #29284
 Flare
 
+#28D78
+NoGuard
+
 #28D20
 Axebreaker
 Swordbreaker

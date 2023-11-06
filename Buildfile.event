@@ -86,7 +86,10 @@
 //#include "hacks/Skills/Personal/LuckySeven/BoostUnitSkill/BoostUnitSkill.event"                                  
 //MESSAGE installed BoostUnitSkill
 
-#include "hacks/Skills/Personal/Flare/Flare.event"                                  
-MESSAGE installed Flare
+//#include "hacks/Skills/Personal/Flare/Flare.event"                                  
+//MESSAGE installed Flare
+
+#include "hacks/Skills/Personal/NoGuard/NoGuard.event"                                  
+MESSAGE installed NoGuard
 
                                                                                                                                                                                     
