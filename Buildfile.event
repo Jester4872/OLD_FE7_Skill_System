@@ -89,7 +89,10 @@
 //#include "hacks/Skills/Personal/Flare/Flare.event"                                  
 //MESSAGE installed Flare
 
-#include "hacks/Skills/Personal/NoGuard/NoGuard.event"                                  
-MESSAGE installed NoGuard
+//#include "hacks/Skills/Personal/NoGuard/NoGuard.event"                                  
+//MESSAGE installed NoGuard
+
+#include "hacks/Skills/Personal/Renewal/Renewal.event"                                  
+MESSAGE installed Renewal
 
                                                                                                                                                                                     

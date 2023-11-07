@@ -28,6 +28,9 @@ Lancebreaker
 Bowbreaker
 Fortune
 
+#19B20
+Renewal
+
 #29128
 DoubleLion
 

@@ -1,0 +1,24 @@
+//FE7 Renewal
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $19B20
+jumpToHack(Renewal)
+
+POP
+
+ALIGN 4
+Renewal:
+#incbin "Renewal.dmp"
