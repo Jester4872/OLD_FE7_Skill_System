@@ -92,7 +92,10 @@
 //#include "hacks/Skills/Personal/NoGuard/NoGuard.event"                                  
 //MESSAGE installed NoGuard
 
-#include "hacks/Skills/Personal/Renewal/Renewal.event"                                  
-MESSAGE installed Renewal
+//#include "hacks/ToggleRain/ToggleRain.event"                                  
+//MESSAGE installed ToggleRain
+
+#include "hacks/Skills/Personal/KillingMachine/KillingMachine.event"                                  
+MESSAGE installed KillingMachine
 
                                                                                                                                                                                     

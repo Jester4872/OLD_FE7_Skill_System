@@ -42,6 +42,7 @@ GoldDigger
 
 #161B0
 HPPlus5
+KillingMachine
 
 #17424
 Lifetaker
