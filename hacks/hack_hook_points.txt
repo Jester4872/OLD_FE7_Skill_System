@@ -42,6 +42,8 @@ GoldDigger
 
 #161B0
 HPPlus5
+
+#28A78
 KillingMachine
 
 #17424
