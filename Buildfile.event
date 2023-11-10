@@ -98,7 +98,8 @@
 //#include "hacks/Skills/Personal/KillingMachine/KillingMachine.event"                                  
 //MESSAGE installed KillingMachine
 
-#include "hacks/Skills/Personal/Covert/Covert.event"                                  
-MESSAGE installed Covert
+//#include "hacks/Skills/Personal/Covert/Covert.event"                                  
+//MESSAGE installed Covert
 
-                                                                                                                                                                                    
+#include "hacks/Skills/Weapon/Frenzy/Frenzy.event"                                  
+MESSAGE installed Frenzy                                                                                                                                                                                    

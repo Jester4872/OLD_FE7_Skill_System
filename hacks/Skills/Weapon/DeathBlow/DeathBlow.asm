@@ -31,7 +31,6 @@ cmp 	r3,#0x01		@equipped item is Iron Sword
 beq 	DeathBlow
 b 		End
 
-
 DeathBlow:
 add		r0,#6			@add +6 to the final damage total
 b		End

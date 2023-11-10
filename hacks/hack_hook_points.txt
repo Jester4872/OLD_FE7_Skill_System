@@ -18,6 +18,9 @@ Armsthrift
 #29284
 Flare
 
+#28C5C
+Covert
+
 #28D78
 NoGuard
 
