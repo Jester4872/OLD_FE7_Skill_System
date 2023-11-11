@@ -41,7 +41,7 @@ CheckCharacterAtk:
     mov     r1,r4
     ldr		r2,[r4,#0x0]	@load pointer to character data
     ldrb	r2,[r2,#0x4]	@load character ID byte
-    cmp		r2,#0x03 		@compare the loaded character ID byte to Lyn's ID
+    cmp		r2,#0x0D 		@compare the loaded character ID byte to Lyn's ID
     beq		ApplyCovert	    @if the current ID matches Lyn's ID, then branch to apply Covert
     b 		End
 
@@ -49,7 +49,7 @@ CheckCharacterDef:
     mov     r1,r5
     ldr		r2,[r5,#0x0]	@load pointer to character data
     ldrb	r2,[r2,#0x4]	@load character ID byte
-    cmp		r2,#0x03 		@compare the loaded character ID byte to Lyn's ID
+    cmp		r2,#0x0D 		@compare the loaded character ID byte to Lyn's ID
     beq		ApplyCovert	    @if the current ID matches Lyn's ID, then branch to apply Covert
     b 		End
 
@@ -66,5 +66,6 @@ End:
     lsl     r0,r0,#0x18     @weird opcodes that negate each other
     asr     r0,r0,#0x18
     add     r0,r0,r1        @add the terrain avoid together with the user's base avoid and store in r0
+    mov     r1,#0x19
     pop     {r5}
     bx      r5

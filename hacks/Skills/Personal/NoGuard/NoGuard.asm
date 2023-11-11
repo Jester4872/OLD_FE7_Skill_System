@@ -31,7 +31,7 @@ CheckCharacterAtk:
     ldr     r0,=#0x203A3F0
     ldr     r2,[r0,#0x0]	@load pointer to character data
     ldrb	r2,[r2,#0x4]	@load character ID byte
-    cmp		r2,#0x03 		@compare the loaded character ID byte to Lyn's ID
+    cmp		r2,#0x1D 		@compare the loaded character ID byte to Lyn's ID
     beq     ApplyNoGuard
     b       End
 
@@ -39,7 +39,7 @@ CheckCharacterDef:
     ldr     r0,=#0x203A470
     ldr     r2,[r0,#0x0]	@load pointer to character data
     ldrb	r2,[r2,#0x4]	@load character ID byte
-    cmp		r2,#0x03 		@compare the loaded character ID byte to Lyn's ID
+    cmp		r2,#0x1D 		@compare the loaded character ID byte to Lyn's ID
     beq     ApplyNoGuard    
     b       End
 

@@ -2,6 +2,7 @@
 Alternative Weapon Modifiers
 Momentum
 Death Blow
+Frenzy
 
 #19CE8
 Acrobat

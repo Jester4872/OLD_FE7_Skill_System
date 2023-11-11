@@ -28,7 +28,7 @@ CheckCharacter:
     push    {r1}
     ldr     r1,[r5]             @load the ROM location of the character's data
     ldrb    r1,[r1,#0x4]        @load the character ID
-    cmp     r1,#0x3             @compare the character ID against your chosen character (Lyn in this case)
+    cmp     r1,#0x9             @compare the character ID against your chosen character (Lyn in this case)
     beq     ApplyRenewal        @apply Renewal if there is a match
     pop     {r1}                @otherwise restore the pushed registers
     b       End                 @and then branch to the end

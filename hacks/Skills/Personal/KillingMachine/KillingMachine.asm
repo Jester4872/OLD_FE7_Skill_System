@@ -28,7 +28,7 @@ CheckCharacterID:
     sub     r1,#0x66        @remove the offset so we can get the start of the struct
     ldr     r2,[r1]
     ldrb    r2,[r2,#0x4]
-    cmp     r2,#0x3
+    cmp     r2,#0x17
     beq     CheckFlag
     b       End
 

@@ -32,7 +32,7 @@ CheckCharacterAtk:
     ldr		r3,=#0x203A3F0	      @load the attacker struct
     ldr		r2,[r3,#0x0]	      @load pointer to character data
     ldrb	r2,[r2,#0x4]	      @load character ID byte
-    cmp		r2,#0x03 		      @compare the loaded character ID byte to Lyn's ID
+    cmp		r2,#0x08 		      @compare the loaded character ID byte to Lyn's ID
     beq		CheckEnemyWeaponDef   @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponAtk
     b 		End
 
@@ -40,7 +40,7 @@ CheckCharacterDef:
     ldr		r3,=#0x203A470	      @load the attacker struct
     ldr		r2,[r3,#0x0]	      @load pointer to character data
     ldrb	r2,[r2,#0x4]	      @load character ID byte
-    cmp		r2,#0x03 		      @compare the loaded character ID byte to Lyn's ID
+    cmp		r2,#0x08 		      @compare the loaded character ID byte to Lyn's ID
     beq		CheckEnemyWeaponAtk   @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponDef
     b 		End
 

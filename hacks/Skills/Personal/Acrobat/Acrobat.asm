@@ -31,14 +31,14 @@ ldrb    r5,[r6,#0x4]            @load the character ID byte
 b       LoadMovementCost        @vanilla instructions to load the movement cost of a tile
 
 LoadMovementCost:               @check the movement cost of each tile and store in unit specific map for retrieval
-    ldr     r3,=#0x8BE3888
     add     r0,r2,r4
     add     r1,r3,r2
     ldrb    r1,[r1]
     b       CheckCharacter      
 
+@realistically this cmp only needs to be checked once per loop. Try to refactor it later
 CheckCharacter:
-    cmp		r5,#0x03 		    @compare the loaded character ID byte to Lyn's ID
+    cmp		r5,#0x10 		    @compare the loaded character ID byte to Lyn's ID
     beq     CanMoveOnTile       @check if the unit can move onto the tile if so
     b       StoreBaseCost       @branch to the end otherwise
 

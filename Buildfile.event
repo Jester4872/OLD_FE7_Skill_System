@@ -6,100 +6,112 @@
 #endif
 
 //#include "hacks/AlternativeWeaponModifiers/AlternativeWeaponModifiers.event"
-//MESSAGE installed AlternativeWeaponModifiers
+//MESSAGE installed AlternativeWeaponModifiers_
 
 //#include "hacks/AlternativeBarrierStaffs/AlternativeBarrierStaffs.event"
-//MESSAGE installed AlternativeBarrierStaffs
+//MESSAGE installed AlternativeBarrierStaffs_
 
 //#include "hacks/Skills/Personal/Paragon/Paragon.event"
-//MESSAGE installed Paragon
+//MESSAGE installed Paragon_
 
 //#include "hacks/Skills/Personal/Lifetaker/Lifetaker.event"
-//MESSAGE installed Lifetaker
+//MESSAGE installed Lifetaker_
 
 //#include "hacks/Skills/Personal/Galeforce/Galeforce.event"
-//MESSAGE installed Galeforce
+//MESSAGE installed Galeforce_
 
 //#include "hacks/Skills/Personal/GoldDigger/GoldDigger.event"
-//MESSAGE installed GoldDigger
+//MESSAGE installed GoldDigger_
 
 //#include "hacks/Skills/Personal/Vantage/Vantage.event"
-//MESSAGE installed Vantage
+//MESSAGE installed Vantage_
 
 //#include "hacks/Skills/Personal/Momentum/Momentum.event"
-//MESSAGE installed Momentum
+//MESSAGE installed Momentum_
 
 //#include "hacks/Skills/Personal/Fortune/Fortune.event"
-//MESSAGE installed Fortune
+//MESSAGE installed Fortune_
 
 //#include "hacks/Skills/Weapon/DeathBlow/DeathBlow.event"
-//MESSAGE installed DeathBlow
+//MESSAGE installed DeathBlow_
 
 //#include "hacks/Skills/Personal/SacaenHeritage/SacaenHeritage.event"
-//MESSAGE installed SacaenHeritage
+//MESSAGE installed SacaenHeritage_
 
 //#include "hacks/Skills/Personal/AlertStance/AlertStanceSetBit.event"
-//MESSAGE installed AlertStance - SetBit
+//MESSAGE installed AlertStance_SetBit
 
 //#include "hacks/Skills/Personal/AlertStance/AlertStanceApply.event"
-//MESSAGE installed AlertStance - Apply
+//MESSAGE installed AlertStance_Apply
 
-//#include "hacks/Skills/Personal/DoubleLion/DoubleLion.event"
-//MESSAGE installed DoubleLion
+#include "hacks/Skills/Personal/DoubleLion/DoubleLion.event"
+MESSAGE installed DoubleLion_
 
 //#include "hacks/Skills/Personal/Armsthrift/Armsthrift.event"
-//MESSAGE installed Armsthrift
+//MESSAGE installed Armsthrift_
 
 //#include "hacks/Skills/Personal/StaffRange+1/StaffRange+1.event"
-//MESSAGE installed StaffRange+1
+//MESSAGE installed StaffRange+1_
 
 //#include "hacks/Skills/Personal/Mercy/Mercy.event"
-//MESSAGE installed Mercy
+//MESSAGE installed Mercy_
 
 //#include "hacks/Skills/Personal/HPPlus5/HPPlus5.event"
-//MESSAGE installed HPPlus5
+//MESSAGE installed HPPlus5_
 
 //#include "hacks/Skills/Personal/PowerPlus3/PowerPlus3.event"
-//MESSAGE installed PowerPlus3
+//MESSAGE installed PowerPlus3_
 
 //#include "hacks/Skills/Personal/MovePlus2/MovePlus2.event"
-//MESSAGE installed MovePlus2Display and MovePlus2Field
+//MESSAGE installed MovePlus2Display_ and MovePlus2Field_
 
 //#include "hacks/Skills/Personal/Acrobat/Acrobat.event"
-//MESSAGE installed Acrobat
+//MESSAGE installed Acrobat_
 
 //#include "hacks/Skills/Personal/Axebreaker/Axebreaker.event"
-//MESSAGE installed Axebreaker
+//MESSAGE installed Axebreaker_
 
 //#include "hacks/Skills/Personal/Swordbreaker/Swordbreaker.event"
-//MESSAGE installed Swordbreaker
+//MESSAGE installed Swordbreaker_
 
 //#include "hacks/Skills/Personal/Lancebreaker/Lancebreaker.event"
-//MESSAGE installed Lancebreaker
+//MESSAGE installed Lancebreaker_
 
 //#include "hacks/Skills/Personal/Bowbreaker/Bowbreaker.event"
-//MESSAGE installed Bowbreaker
+//MESSAGE installed Bowbreaker_
 
 //#include "hacks/Skills/Personal/LuckySeven/LuckySeven.event"                                  
-//MESSAGE installed LuckySeven 
+//MESSAGE installed LuckySeven_ 
 
 //#include "hacks/Skills/Personal/LuckySeven/BoostUnitSkill/BoostUnitSkill.event"                                  
-//MESSAGE installed BoostUnitSkill
+//MESSAGE installed BoostUnitSkill_
 
 //#include "hacks/Skills/Personal/Flare/Flare.event"                                  
-//MESSAGE installed Flare
+//MESSAGE installed Flare_
 
 //#include "hacks/Skills/Personal/NoGuard/NoGuard.event"                                  
-//MESSAGE installed NoGuard
+//MESSAGE installed NoGuard_
 
 //#include "hacks/ToggleRain/ToggleRain.event"                                  
-//MESSAGE installed ToggleRain
+//MESSAGE installed ToggleRain_
 
 //#include "hacks/Skills/Personal/KillingMachine/KillingMachine.event"                                  
-//MESSAGE installed KillingMachine
+//MESSAGE installed KillingMachine_
 
 //#include "hacks/Skills/Personal/Covert/Covert.event"                                  
-//MESSAGE installed Covert
+//MESSAGE installed Covert_
 
-#include "hacks/Skills/Weapon/Frenzy/Frenzy.event"                                  
-MESSAGE installed Frenzy                                                                                                                                                                                    
+//#include "hacks/Skills/Personal/Renewal/Renewal.event"                                  
+//MESSAGE installed Renewal_
+
+//#include "hacks/Skills/Weapon/Frenzy/Frenzy.event"                                  
+//MESSAGE installed Frenzy_   
+
+//#include "hacks/Skills/Personal/RangePlus1/Battle1/RangePlus1.event"                                  
+//MESSAGE installed RangePlus1Battle1_
+
+//#include "hacks/Skills/Personal/RangePlus1/Battle2/RangePlus1.event"                                  
+//MESSAGE installed RangePlus1Battle2_
+
+//#include "hacks/Skills/Personal/RangePlus1/Field/RangePlus1.event"                                  
+//MESSAGE installed RangePlus1Field_

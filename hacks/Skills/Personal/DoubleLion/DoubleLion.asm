@@ -22,18 +22,12 @@ push	{r1-r3}
 mov		r3,r0				@copy the attacker/defender struct to another register for use later
 ldr		r2,[r3,#0x0]		@load pointer to character data
 ldrb	r2,[r2,#0x4]		@load character ID byte
-cmp		r2,#0x03 			@compare the loaded character ID byte to Lyn's ID
+cmp		r2,#0x13 			@compare the loaded character ID byte to Lyn's ID
 beq		ApplyBrave			@If lyn, branch to ApplyBrave
-b		RemoveBrave         @if notm remove the set bit (this may fuck up other weapon effects, investigate later)
+b		End
 
 ApplyBrave:	
 mov		r2,#0x20 			@brave byte (regardless of what the teq notes say)
-mov		r1,#0x4C			@get the ability offset
-strb	r2,[r3,r1]			@store the brave byte in the ability offset
-b 		End					@branch to End
-
-RemoveBrave:
-mov		r2,#0x00 			@brave byte (regardless of what the teq notes say)
 mov		r1,#0x4C			@get the ability offset
 strb	r2,[r3,r1]			@store the brave byte in the ability offset
 b 		End					@branch to End
