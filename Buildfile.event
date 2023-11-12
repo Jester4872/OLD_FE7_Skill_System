@@ -44,8 +44,8 @@
 //#include "hacks/Skills/Personal/AlertStance/AlertStanceApply.event"
 //MESSAGE installed AlertStance_Apply
 
-#include "hacks/Skills/Personal/DoubleLion/DoubleLion.event"
-MESSAGE installed DoubleLion_
+//#include "hacks/Skills/Personal/DoubleLion/DoubleLion.event"
+//MESSAGE installed DoubleLion_
 
 //#include "hacks/Skills/Personal/Armsthrift/Armsthrift.event"
 //MESSAGE installed Armsthrift_
@@ -115,3 +115,9 @@ MESSAGE installed DoubleLion_
 
 //#include "hacks/Skills/Personal/RangePlus1/Field/RangePlus1.event"                                  
 //MESSAGE installed RangePlus1Field_
+
+#include "hacks/Skills/Personal/TriangleAdapt/Attack/TriangleAdaptAttack.event"                                  
+MESSAGE installed TriangleAdaptAttack_
+
+#include "hacks/Skills/Personal/TriangleAdapt/HitRate/TriangleAdaptHitRate.event"                                  
+MESSAGE installed TriangleAdaptHitRate_

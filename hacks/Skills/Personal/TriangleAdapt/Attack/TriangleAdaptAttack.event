@@ -1,4 +1,4 @@
-//FE7 TriangleAdapt
+//FE7 TriangleAdaptAttack
 
 #ifndef _FE7_
     ERROR "You're not assembling to an FE7 ROM!"
@@ -14,11 +14,11 @@
 
 PUSH
 
-ORG $ 
-callHack_r3(TriangleAdapt)
+ORG $28B24
+callHack_r3(TriangleAdaptAttack)
 
 POP
 
 ALIGN 4
-TriangleAdapt:
-#incbin "TriangleAdapt.dmp"
+TriangleAdaptAttack:
+#incbin "TriangleAdaptAttack.dmp"
