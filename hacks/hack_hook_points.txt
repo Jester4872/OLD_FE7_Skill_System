@@ -73,3 +73,9 @@ SacaenHeritage
 
 #28FB8
 Vantage
+
+#28B24
+TriangleAdaptAttack
+
+#28BC4
+TriangleAdaptHitRate

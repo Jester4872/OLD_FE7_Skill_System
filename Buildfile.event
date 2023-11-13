@@ -116,8 +116,11 @@
 //#include "hacks/Skills/Personal/RangePlus1/Field/RangePlus1.event"                                  
 //MESSAGE installed RangePlus1Field_
 
-#include "hacks/Skills/Personal/TriangleAdapt/Attack/TriangleAdaptAttack.event"                                  
-MESSAGE installed TriangleAdaptAttack_
+//#include "hacks/Skills/Personal/TriangleAdapt/Attack/TriangleAdaptAttack.event"                                  
+//MESSAGE installed TriangleAdaptAttack_
 
-#include "hacks/Skills/Personal/TriangleAdapt/HitRate/TriangleAdaptHitRate.event"                                  
-MESSAGE installed TriangleAdaptHitRate_
+//#include "hacks/Skills/Personal/TriangleAdapt/HitRate/TriangleAdaptHitRate.event"                                  
+//MESSAGE installed TriangleAdaptHitRate_
+
+#include "hacks/Skills/Personal/GrisleyWound/GrisleyWound.event"                                  
+MESSAGE installed GrisleyWound_ 
