@@ -159,11 +159,11 @@ Just before the attacker's battle struct is data used to display the pre-battle 
 203A4D4 (FE8) 203A4D0 (FE8J) 203A3D8 (FE7)
 0x00	Short	Seems to be a bitfield (0x2 seems to be 'battle hasn't started yet') (0x20 is arena) (0x80 is staff?) (0x40 = dance) (0x200 = dancer ring)
 Byte 0x0:
-	0x01 ?
+	0x01 Battle has started
 	0x02 Battle not started yet
 	0x04 ?
 	0x08 Ballista
-	0x10 ?
+	0x10 Promotion animation screen
 	0x20 Arena battle
 	0x40 Dance
 	0x80 Staff
@@ -207,7 +207,3 @@ Byte 0x2:
 	0x10 
 
 Byte 0x3 is damage
-
-############
-
-HP increases to stupid values when in battle because the hook point keeps getting called. Consider a bitflag

@@ -122,5 +122,8 @@
 //#include "hacks/Skills/Personal/TriangleAdapt/HitRate/TriangleAdaptHitRate.event"                                  
 //MESSAGE installed TriangleAdaptHitRate_
 
-#include "hacks/Skills/Personal/GrisleyWound/GrisleyWound.event"                                  
-MESSAGE installed GrisleyWound_ 
+//#include "hacks/Skills/Personal/GrisleyWound/GrisleyWound.event"                                  
+//MESSAGE installed GrisleyWound_ 
+
+#include "hacks/Skills/Personal/CloseCounter/CloseCounter.event"                                  
+MESSAGE installed CloseCounter_ 

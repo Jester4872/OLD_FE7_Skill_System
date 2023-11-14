@@ -18,11 +18,6 @@
 @r14=#0x8029AE3
 @r15=#0x8029C34
 
-@As this skill is currently set up, I believe only a maximum of 40 enemy units
-@can be on the map before the CheckAllegiance function is inaccurate
-@though I have not accounted for how reinforcements affect the allegiance numbers for each side
-@While this limit also applies to player and NPC characters, you won't get near 40 with either.
-
 push    {r14}
 push    {r2}
 b       CheckCharacter
