@@ -125,5 +125,8 @@
 //#include "hacks/Skills/Personal/GrisleyWound/GrisleyWound.event"                                  
 //MESSAGE installed GrisleyWound_ 
 
-#include "hacks/Skills/Personal/CloseCounter/CloseCounter.event"                                  
-MESSAGE installed CloseCounter_ 
+//#include "hacks/Skills/Personal/CloseCounter/CloseCounter.event"                                  
+//MESSAGE installed CloseCounter_ 
+
+#include "hacks/Skills/Personal/Dragonskin/Dragonskin.event"                                  
+MESSAGE installed Dragonskin_ 

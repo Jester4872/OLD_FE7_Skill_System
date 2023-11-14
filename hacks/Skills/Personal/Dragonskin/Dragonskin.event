@@ -1,0 +1,24 @@
+//FE7 Dragonskin
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $293A0
+callHack_r3(Dragonskin)
+
+POP
+
+ALIGN 4
+Dragonskin:
+#incbin "Dragonskin.dmp"

@@ -79,3 +79,12 @@ TriangleAdaptAttack
 
 #28BC4
 TriangleAdaptHitRate
+
+#167C8
+CloseCounter
+
+#29C34
+GrisleyWound
+
+#293A0
+Dragonskin
