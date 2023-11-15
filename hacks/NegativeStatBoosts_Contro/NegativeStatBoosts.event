@@ -1,0 +1,40 @@
+#ifndef NEGATIVE_STAT_BOOSTS_DISPLAY
+#define NEGATIVE_STAT_BOOSTS_DISPLAY
+
+// Display Negative Stat Boosts correctly.
+// Hack by circleseverywhere
+
+#ifdef _FE7_
+
+  {
+
+  PUSH
+    ORG $6240
+      jumpToHack(NegStatBoosts)
+      PROTECT $6240 currentOffset
+
+    ORG $B8BF6C //minus sign position fix
+      WORD 0 0 0 $3ff0 $eaac $3ff0
+      PROTECT $B8BF6C currentOffset
+
+    ORG $7f800 //drawing the bars
+      //SHORT $46C0
+      jumpToHack(NegativeStatBars)
+      PROTECT $7f800 currentOffset
+  POP
+
+  ALIGN 4
+  NegStatBoosts:
+    #incbin "negativestatboosts.dmp"
+
+  ALIGN 4
+  NegativeStatBars:
+    #incbin "negativestatbar.dmp"
+
+  }
+
+#else // _FE7_
+  ERROR This is the FE7 version of Negative Stat Boosts
+#endif // _FE7_
+
+#endif // NEGATIVE_STAT_BOOSTS_DISPLAY

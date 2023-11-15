@@ -1,0 +1,18 @@
+Doesn'tKnowHowToPlay
+    Vantage code
+    https://forums.serenesforest.net/index.php?/topic/70250-fe7fe8-reverse/
+
+Vesley (FEUniverse Discord) -
+    General ASM advice
+
+Smethlyn (FEUniverse Discord) - 
+    General ASM advice
+
+TR143
+    https://feuniverse.us/t/gba-rng-randomizer/3175
+    RNG location
+
+Contro
+    NegativeStatBoosts
+    https://github.com/masterofcontroversy/ASM/tree/main/FE7/NegativeStatBoosts
+
