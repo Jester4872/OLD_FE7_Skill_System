@@ -1,4 +1,4 @@
-//FE7 GrisleyWound
+//FE7 EffectivenessEditor
 
 #ifndef _FE7_
     ERROR "You're not assembling to an FE7 ROM!"
@@ -14,11 +14,11 @@
 
 PUSH
 
-ORG $29C34
-callHack_r3(GrisleyWound)
+ORG 0xD00000
+jumpToHack(BanditEffectiveness)
 
 POP
 
 ALIGN 4
-GrisleyWound:
-#incbin "GrisleyWound.dmp"
+BanditEffectiveness:
+#incbin "EffectivenessEditor.dmp"
