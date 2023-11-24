@@ -88,3 +88,9 @@ GrisleyWound
 
 #293A0
 Dragonskin
+
+#16834
+BanditBreaker
+
+#28B48
+TripleEffectiveness

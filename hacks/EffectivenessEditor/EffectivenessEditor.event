@@ -13,8 +13,6 @@
 //#endif
 
 PUSH
-
-ORG 0xD00000
 jumpToHack(BanditEffectiveness)
 
 POP

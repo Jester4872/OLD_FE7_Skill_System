@@ -12,7 +12,6 @@
 MESSAGE installed EffectivenessEditorTable_ 
 //////////////////////////////////////////////////////////////////
 
-
 //#include "hacks/AlternativeWeaponModifiers/AlternativeWeaponModifiers.event"
 //MESSAGE installed AlternativeWeaponModifiers_
 
@@ -146,10 +145,10 @@ MESSAGE installed EffectivenessEditorTable_
 //MESSAGE installed SealStrengthApply_ 
 
 //#include "hacks/NegativeStatBoosts_Contro/NegativeStatBoosts.event"
-//MESSAGE installed NegativeStatBoosts
+//MESSAGE installed NegativeStatBoosts_
 
 #include "hacks/Skills/Personal/BanditBreaker/BanditBreaker.event"                                  
 MESSAGE installed BanditBreaker_ 
 
-
-
+#include "hacks/TripleEffectiveness/TripleEffectiveness.event"                                  
+MESSAGE installed TripleEffectiveness_ 

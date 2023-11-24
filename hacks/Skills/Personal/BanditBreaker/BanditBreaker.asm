@@ -18,6 +18,8 @@
 @r14=#0x8028B3B
 @r15=#0x8016834
 
+.equ BanditEffectiveness, 0x8D00000
+
 lsl     r0,r0,#0x2              @vanilla instruction
 ldr     r1,=#0x8BE222C          @vanilla instruction
 add     r0,r0,r1                @vanilla instruction
@@ -38,8 +40,8 @@ CheckCharacter:
     beq     BanditBreaker
     b       End                 @if all else fails, we branch to the end
 
-BanditBreaker:
-    ldr     r2,=#0x8D00000      @load the hardcoded bandit effectiveness list
+BanditBreaker: 
+    ldr     r2,=BanditEffectiveness  @load the hardcoded bandit effectiveness list
     b       End
 
 End:
