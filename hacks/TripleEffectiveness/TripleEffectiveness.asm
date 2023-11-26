@@ -22,8 +22,8 @@
 @with the stat screen. In addition, you need to make sure the right register is used (I think jumpToHack uses r3 be default
 @with no visible option to change. Explore this)
 
-mov     r1,r5           @move attacker struct to r1
-add     r1,#0x5A        @attack byte of attacker struct
+mov     r1,r5           @move attacker/defender struct to r1
+add     r1,#0x5A        @attack byte of attacker/defender struct
 ldrh    r2,[r1]         @attack of weapon plus the weapon triangle bonus
 lsl     r0,r2,#0x1      @double its value
 add     r0,r2           @add the original value again to make it x3 

@@ -94,3 +94,6 @@ BanditBreaker
 
 #28B48
 TripleEffectiveness
+
+#17328
+Hex
