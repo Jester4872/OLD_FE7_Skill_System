@@ -18,13 +18,10 @@
 @r14=#0x80289E9
 @r15=#0x8028A28
 
-@load the attacker and defender structs
-@check the character we want to apply the skill to is in one of them
-@get the turn count
-@apply a boost to the character's avoid and hit rate based on that turn count
-@also apply a check to the turn count to avoid additional boost being added after turn 15
-
+@right now the skill applies twice if the user is the one attacking the foe.
 push  {r0-r3}
+cmp   r2,#0x0                       @this check exists to exit the skill application early if r2 is equal to 0 
+beq   End
 ldr   r0,=#0x203A3F0                @load the attacker struct
 ldr   r1,[r0,#0x0]                  @load the pointer to the unit's data
 ldrb  r1,[r1,#0x4]                  @load the unit's character ID
