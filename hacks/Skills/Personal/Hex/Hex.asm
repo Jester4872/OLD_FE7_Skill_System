@@ -20,12 +20,12 @@
 
 push  {r0-r7}
 ldr   r5,=#0x203A3F0                @load the attacker struct
-ldr   r0,[r1,#0x0]                  @load the pointer to the unit's data
+ldr   r0,[r5,#0x0]                  @load the pointer to the unit's data
 ldrb  r0,[r0,#0x4]                  @load the unit's character ID
 cmp   r0,#0x03                      @compare against a chosen character ID
 beq   StoreCoordinates              @store the unit's coordinates if a match is found, as they are the skill holder
 ldr   r5,=#0x203A470                @load the defender struct
-ldr   r0,[r1,#0x0]                  @load the pointer to the unit's data
+ldr   r0,[r5,#0x0]                  @load the pointer to the unit's data
 ldrb  r0,[r0,#0x4]                  @load the unit's character ID
 cmp   r0,#0x03                      @compare against a chosen character's ID
 beq   StoreCoordinates              @store the unit's coordinates if a match is found, as they are the skill holder

@@ -153,5 +153,8 @@
 //#include "hacks/NegativeStatBoosts_Contro/NegativeStatBoosts.event"
 //MESSAGE installed NegativeStatBoosts_
 
-#include "hacks/Skills/Personal/Hex/Hex.event"                                  
-MESSAGE installed Hex_
+//#include "hacks/Skills/Personal/Hex/Hex.event"                                  
+//MESSAGE installed Hex_
+
+#include "hacks/Skills/Personal/SlowBurn/SlowBurn.event"                                  
+MESSAGE installed Slowburn_

@@ -18,15 +18,11 @@
 @r14=#0x8028B49
 @r15=#0x8028B48
 
-@The insertion point for this hack needs to be changed to 28B48 and needs to use jumpToHack to prevent overlap
-@with the stat screen. In addition, you need to make sure the right register is used (I think jumpToHack uses r3 be default
-@with no visible option to change. Explore this)
-
-mov     r1,r5           @move attacker/defender struct to r1
-add     r1,#0x5A        @attack byte of attacker/defender struct
-ldrh    r2,[r1]         @attack of weapon plus the weapon triangle bonus
-lsl     r0,r2,#0x1      @double its value
-add     r0,r2           @add the original value again to make it x3 
-ldr     r4,=#0x8028B50|1
-bx      r4
+mov     r1,r5               @move attacker/defender struct to r1
+add     r1,#0x5A            @attack byte of attacker/defender struct
+ldrh    r2,[r1]             @attack of weapon plus the weapon triangle bonus
+lsl     r0,r2,#0x1          @double its value
+add     r0,r2               @add the original value again to make it x3 
+ldr     r4,=#0x8028B50|1    @hardcode return address as we're using jumpToHack instead of callHack
+bx      r4                  @return to the vanilla routine
 
