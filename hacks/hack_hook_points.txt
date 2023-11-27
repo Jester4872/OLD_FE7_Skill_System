@@ -97,3 +97,7 @@ TripleEffectiveness
 
 #17328
 Hex
+
+#28A28
+SlowBurn
+QuickBurn
