@@ -159,5 +159,8 @@
 //#include "hacks/Skills/Personal/SlowBurn/SlowBurn.event"                                  
 //MESSAGE installed SlowBurn_
 
-#include "hacks/Skills/Personal/QuickBurn/QuickBurn.event"                                  
-MESSAGE installed QuickBurn_
+//#include "hacks/Skills/Personal/QuickBurn/QuickBurn.event"                                  
+//MESSAGE installed QuickBurn_
+
+#include "hacks/Skills/Personal/Savior/Savior.event"                                  
+MESSAGE installed Savior_

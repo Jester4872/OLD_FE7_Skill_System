@@ -49,7 +49,7 @@ CheckEnemyWeaponAtk:
     mov     r2,#0x50
     ldrb	r2,[r3,r2]	          @load the weapon type
     cmp     r2,#0x03              @is the enemy weapon type a bow?
-    beq     ApplyBowbreakerDef  @apply Swordbreaker if so
+    beq     ApplyBowbreakerDef    @apply Swordbreaker if so
     b       End                   @otherwise branch to the end
 
 CheckEnemyWeaponDef:
@@ -57,7 +57,7 @@ CheckEnemyWeaponDef:
     mov     r2,#0x50
     ldrb	r2,[r3,r2]	          @load the weapon type
     cmp     r2,#0x03              @is the enemy weapon type a bow?
-    beq     ApplyBowbreakerAtk  @apply Swordbreaker if so
+    beq     ApplyBowbreakerAtk    @apply Swordbreaker if so
     b       End                   @otherwise branch to the end
 
 ApplyBowbreakerAtk:

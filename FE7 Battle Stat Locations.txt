@@ -32,6 +32,7 @@ Byte	Type	Description
 	0x08		Not deployed
 	0x10		Rescuing someone
 	0x20		Being rescued
+	0x30		Being rescued again?
 	0x40		Moved this turn/canto-ing
 	0x80		On a roof tile (basically, a do-not-display). Checked at 79FFC. Also skips displaying danger zone at 1B894.
 	

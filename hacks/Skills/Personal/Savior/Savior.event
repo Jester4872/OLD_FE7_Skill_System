@@ -1,0 +1,127 @@
+//FE7 Savior
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//Takes 0x8 bytes
+#define jumpToHackr0(offset) "BYTE 0x00 0x48 0x00 0x47; POIN (offset|0x1)"
+#define jumpToHackr1(offset) "BYTE 0x00 0x49 0x08 0x47; POIN (offset|0x1)"
+#define jumpToHackr2(offset) "BYTE 0x00 0x4A 0x10 0x47; POIN (offset|0x1)" 
+#define jumpToHackr3(offset) "BYTE 0x00 0x4B 0x18 0x47; POIN (offset|0x1)"
+#define jumpToHackr4(offset) "BYTE 0x00 0x4C 0x20 0x47; POIN (offset|0x1)"
+#define jumpToHackr5(offset) "BYTE 0x00 0x4D 0x28 0x47; POIN (offset|0x1)"
+#define jumpToHackr6(offset) "BYTE 0x00 0x4E 0x30 0x47; POIN (offset|0x1)" 
+#define jumpToHackr7(offset) "BYTE 0x00 0x4F 0x38 0x47; POIN (offset|0x1)"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+
+//SKILL 
+////////////////////////////////////////////////
+PUSH
+ORG $18AF8
+jumpToHackr3(Savior_Skill_Graphic_Number)
+POP
+ALIGN 4
+Savior_Skill_Graphic_Number:
+#incbin "Savior_Skill_Graphic_Number.dmp"
+
+PUSH
+ORG $7FEA0
+jumpToHackr3(Savior_Skill_Battle_Number_1)
+POP
+ALIGN 4
+Savior_Skill_Battle_Number_1:
+#incbin "Savior_Skill_Battle_Number_1.dmp"
+
+PUSH
+ORG $7FEC0
+jumpToHackr0(Savior_Skill_Battle_Number_2)
+POP
+ALIGN 4
+Savior_Skill_Battle_Number_2:
+#incbin "Savior_Skill_Battle_Number_2.dmp"
+////////////////////////////////////////////////
+
+//SPEED
+////////////////////////////////////////////////
+PUSH
+ORG $18B38
+jumpToHackr3(Savior_Speed_Graphic_Number)
+POP
+ALIGN 4
+Savior_Speed_Graphic_Number:
+#incbin "Savior_Speed_Graphic_Number.dmp"
+
+PUSH
+ORG $7FEEC
+jumpToHackr3(Savior_Speed_Battle_Number_1)
+POP
+ALIGN 4
+Savior_Speed_Battle_Number_1:
+#incbin "Savior_Speed_Battle_Number_1.dmp"
+
+PUSH
+ORG $7FF08
+jumpToHackr0(Savior_Speed_Battle_Number_2)
+POP
+ALIGN 4
+Savior_Speed_Battle_Number_2:
+#incbin "Savior_Speed_Battle_Number_2.dmp"
+///////////////////////////////////////////////
+
+//ARROWS
+///////////////////////////////////////////////
+PUSH
+ORG $80F84  
+jumpToHackr0(Arrow)
+POP
+ALIGN 4
+Arrow:
+#incbin "Arrow.dmp"
+///////////////////////////////////////////////
+
+
+//STAT BOOSTS
+///////////////////////////////////////////////
+//PUSH
+//ORG $18AE0
+//callHack_r3(PowerPlus1)
+//POP
+//ALIGN 4
+//PowerPlus1:
+//#incbin "Boosts/PowerPlus1.dmp"
+
+//NOT WORKING as there is no 4 aligned space to hook into at the point this is called on a rescuer unit
+//PUSH
+//ORG $18B1C
+//callHack_r3(SkillPlus1)
+//POP
+//ALIGN 4
+//SkillPlus1:
+//#incbin "Boosts/SkillPlus1.dmp"
+
+//NOT WORKING as there is no 4 aligned space to hook into at the point this is called on a rescuer unit
+//PUSH
+//ORG $18B5C
+//jumpToHackr3(SpeedPlus1)
+//POP
+//ALIGN 4
+//SpeedPlus1:
+//#incbin "Boosts/SpeedPlus1.dmp"
+
+PUSH
+ORG $18BC8 
+callHack_r3(LuckPlus1)
+POP
+ALIGN 4
+LuckPlus1:
+#incbin "Boosts/LuckPlus1.dmp"
+///////////////////////////////////////////////
