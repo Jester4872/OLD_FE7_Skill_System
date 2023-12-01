@@ -162,5 +162,8 @@
 //#include "hacks/Skills/Personal/QuickBurn/QuickBurn.event"                                  
 //MESSAGE installed QuickBurn_
 
-#include "hacks/Skills/Personal/Savior/Savior.event"                                  
-MESSAGE installed Savior_
+//#include "hacks/Skills/Personal/Savior/Savior.event"                                  
+//MESSAGE installed Savior_
+
+#include "hacks/Skills/Personal/Aptitude/Aptitude.event"                                  
+MESSAGE installed Aptitude_

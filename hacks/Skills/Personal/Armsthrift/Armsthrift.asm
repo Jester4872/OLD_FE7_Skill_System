@@ -53,7 +53,7 @@ blh     GetRandomNumber, r0 @get a random number between 0-100
 mov     r1,r0               @move the random number to register 1
 mov     r3,#0x19            @get luck byte
 ldrb    r2,[r2,r3]          @load luck byte
-lsl     r2,r2,#4            @luck * 16  (2^4)
+lsl     r2,r2,#2            @luck * 2 (2^1)
 pop     {r0}                @restore the equipped weapon and uses after battle short
 cmp     r2,r1               @compare the random number against the doubled luck
 bge     ApplyArmsthrift     @apply Armsthrift if luck is greater than or equal to the random number
