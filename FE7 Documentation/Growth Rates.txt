@@ -1,0 +1,7 @@
+#0x80296B8  HP Growth
+#0x80296C8  Attack Growth
+#0x80296E8  Skill Growth
+#0x8029700  Speed Growth
+#0x802971A  Defense Growth
+#0x8029732  Resistance Growth
+#0x8029748  Luck Growth

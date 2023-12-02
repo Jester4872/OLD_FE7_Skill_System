@@ -29,3 +29,51 @@ POP
 ALIGN 4
 Aptitude_HP:
 #incbin "Aptitude_HP.dmp"
+
+PUSH
+ORG $296CC
+jumpToHackr2(Aptitude_Attack)
+POP
+ALIGN 4
+Aptitude_Attack:
+#incbin "Aptitude_Attack.dmp"
+
+PUSH
+ORG $296E4
+jumpToHackr2(Aptitude_Skill)
+POP
+ALIGN 4
+Aptitude_Skill:
+#incbin "Aptitude_Skill.dmp"
+
+PUSH
+ORG $296FC
+jumpToHackr2(Aptitude_Speed)
+POP
+ALIGN 4
+Aptitude_Speed:
+#incbin "Aptitude_Speed.dmp"
+
+PUSH
+ORG $29714
+jumpToHackr2(Aptitude_Defense)
+POP
+ALIGN 4
+Aptitude_Defense:
+#incbin "Aptitude_Defense.dmp"
+
+PUSH
+ORG $2972C
+jumpToHackr2(Aptitude_Resistance)
+POP
+ALIGN 4
+Aptitude_Resistance:
+#incbin "Aptitude_Resistance.dmp"
+
+PUSH
+ORG $29744
+jumpToHackr2(Aptitude_Luck)
+POP
+ALIGN 4
+Aptitude_Luck:
+#incbin "Aptitude_Luck.dmp"
