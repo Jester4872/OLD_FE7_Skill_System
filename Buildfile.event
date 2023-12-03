@@ -165,5 +165,8 @@
 //#include "hacks/Skills/Personal/Savior/Savior.event"                                  
 //MESSAGE installed Savior_
 
-#include "hacks/Skills/Personal/Aptitude/Aptitude.event"                                  
-MESSAGE installed Aptitude_
+//#include "hacks/Skills/Personal/Aptitude/Aptitude.event"                                  
+//MESSAGE installed Aptitude_
+
+#include "hacks/Skills/Personal/Focus/Focus.event"                                  
+MESSAGE installed Focus_

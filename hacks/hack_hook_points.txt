@@ -121,4 +121,26 @@ LuckPlus1
 SpeedPlus1
 ///////////
 
+#296B8
+Aptitude_HP
 
+#296CC
+Aptitude_Attack
+
+#296E4
+Aptitude_Skill
+
+#296FC
+Aptitude_Speed
+
+#29714
+Aptitude_Defense
+
+#2972C
+Aptitude_Resistance
+
+#29744
+Aptitude_Luck
+
+#28D18
+Focus

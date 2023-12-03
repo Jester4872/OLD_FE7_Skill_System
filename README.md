@@ -20,6 +20,7 @@ Currently, skills must be assigned defining either a weapon ID or class/characte
 | Frenzy  | Add the unit's lost HP / 4 to their attack
 | Acrobat | All terrain traversal costs are 1
 | Alert Stance | +20 avoid when selecting the wait command
+| Aptitude | +20% additional growth rates
 | Armsthift | Luck * 2 % chance of conserving a weapon use
 | Axebreaker | +20 hit and avoid when facing axe users
 | Banditbreaker | Effective damage against brigands, pirates and berserkers
@@ -29,6 +30,7 @@ Currently, skills must be assigned defining either a weapon ID or class/characte
 | Double Lion | All weapons are treated as if they have the 'brave' effect
 | Dragon Skin | Half all damage to the unit
 | Flare | All the defense of the unit you're attacking (also applies to resistence)
+| Focus | Applies +10 crit to the unit if there are no allies within 3 spaces
 | Fortune | Negate critical attacks on this unit
 | Galeforce | The unit can move again after defeating an enemy (currently limitless)
 | Gold Digger | +100 gold added after every battle
@@ -44,7 +46,7 @@ Currently, skills must be assigned defining either a weapon ID or class/characte
 | No Guard | Both this unit and the enemy have 100% hit rates
 | Paragon | Double experience gain
 | Power + 3 |
-| Quick Burn | + 15 hit and avoid at the start of the map, -1 each turn
+| Quick Burn | +15 hit and avoid at the start of the map, -1 each turn
 | Renewal | This units regains 30% of their HP at the start of their turn
 | Sacaen Heritage | +20 avoid when fighting on plains tiles
 | Savior | Ignore rescue penalties

@@ -1,0 +1,31 @@
+//FE7 Focus
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//Takes 0x8 bytes
+#define jumpToHackr0(offset) "BYTE 0x00 0x48 0x00 0x47; POIN (offset|0x1)"
+#define jumpToHackr1(offset) "BYTE 0x00 0x49 0x08 0x47; POIN (offset|0x1)"
+#define jumpToHackr2(offset) "BYTE 0x00 0x4A 0x10 0x47; POIN (offset|0x1)" 
+#define jumpToHackr3(offset) "BYTE 0x00 0x4B 0x18 0x47; POIN (offset|0x1)"
+#define jumpToHackr4(offset) "BYTE 0x00 0x4C 0x20 0x47; POIN (offset|0x1)"
+#define jumpToHackr5(offset) "BYTE 0x00 0x4D 0x28 0x47; POIN (offset|0x1)"
+#define jumpToHackr6(offset) "BYTE 0x00 0x4E 0x30 0x47; POIN (offset|0x1)" 
+#define jumpToHackr7(offset) "BYTE 0x00 0x4F 0x38 0x47; POIN (offset|0x1)"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+ORG $28D18
+jumpToHackr3(Focus)
+POP
+ALIGN 4
+Focus:
+#incbin "Focus.dmp"
