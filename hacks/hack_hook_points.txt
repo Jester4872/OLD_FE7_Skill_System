@@ -144,3 +144,6 @@ Aptitude_Luck
 
 #28D18
 Focus
+
+#28D88
+LifeAndDeath
