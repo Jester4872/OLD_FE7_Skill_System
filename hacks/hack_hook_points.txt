@@ -50,7 +50,7 @@ HPPlus5
 #28A78
 KillingMachine
 
-#17424
+#1742C
 Lifetaker
 
 #29450

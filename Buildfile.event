@@ -27,8 +27,8 @@
 //#include "hacks/Skills/Personal/Paragon/Paragon.event"
 //MESSAGE installed Paragon_
 
-//#include "hacks/Skills/Personal/Lifetaker/Lifetaker.event"
-//MESSAGE installed Lifetaker_
+#include "hacks/Skills/Personal/Lifetaker/Lifetaker.event"
+MESSAGE installed Lifetaker_
 
 //#include "hacks/Skills/Personal/Galeforce/Galeforce.event"
 //MESSAGE installed Galeforce_
@@ -171,5 +171,8 @@
 //#include "hacks/Skills/Personal/Focus/Focus.event"                                  
 //MESSAGE installed Focus_
 
-#include "hacks/Skills/Personal/LifeAndDeath/LifeAndDeath.event"                                  
-MESSAGE installed LifeAndDeath_
+//#include "hacks/Skills/Personal/LifeAndDeath/LifeAndDeath.event"                                  
+//MESSAGE installed LifeAndDeath_
+
+//#include "hacks/Skills/Personal/Counter/Counter.event"                                  
+//MESSAGE installed Counter_
