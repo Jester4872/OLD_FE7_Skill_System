@@ -1,0 +1,22 @@
+//FE7 BoostUnitDefense
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+
+ORG $18B80
+callHack_r3(BoostUnitDefense)
+POP
+ALIGN 4
+BoostUnitDefense:
+#incbin "BoostUnitDefense.dmp"

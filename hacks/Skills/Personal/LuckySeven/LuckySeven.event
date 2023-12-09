@@ -1,0 +1,28 @@
+//FE7 LuckySeven
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+#include "BoostUnitDefense/BoostUnitDefense.event"
+#include "BoostUnitLuck/BoostUnitLuck.event"
+#include "BoostUnitPower/BoostUnitPower.event"
+#include "BoostUnitResistance/BoostUnitResistance.event"
+#include "BoostUnitSkill/BoostUnitSkill.event"
+#include "BoostUnitSpeed/BoostUnitSpeed.event"
+
+PUSH
+ORG $18A70
+jumpToHackr3(LuckySeven)
+POP
+ALIGN 4
+LuckySeven:
+#incbin "LuckySeven.dmp"

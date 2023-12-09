@@ -147,3 +147,6 @@ Focus
 
 #28D88
 LifeAndDeath
+
+#18A70
+LuckySeven

@@ -27,8 +27,8 @@
 //#include "hacks/Skills/Personal/Paragon/Paragon.event"
 //MESSAGE installed Paragon_
 
-#include "hacks/Skills/Personal/Lifetaker/Lifetaker.event"
-MESSAGE installed Lifetaker_
+//#include "hacks/Skills/Personal/Lifetaker/Lifetaker.event"
+//MESSAGE installed Lifetaker_
 
 //#include "hacks/Skills/Personal/Galeforce/Galeforce.event"
 //MESSAGE installed Galeforce_
@@ -93,8 +93,8 @@ MESSAGE installed Lifetaker_
 //#include "hacks/Skills/Personal/Bowbreaker/Bowbreaker.event"
 //MESSAGE installed Bowbreaker_
 
-//#include "hacks/Skills/Personal/LuckySeven/LuckySeven.event"                                  
-//MESSAGE installed LuckySeven_ 
+#include "hacks/Skills/Personal/LuckySeven/LuckySeven.event"                                  
+MESSAGE installed LuckySeven_ 
 
 //#include "hacks/Skills/Personal/LuckySeven/BoostUnitSkill/BoostUnitSkill.event"                                  
 //MESSAGE installed BoostUnitSkill_

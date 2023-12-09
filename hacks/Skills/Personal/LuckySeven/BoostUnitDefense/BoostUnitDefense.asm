@@ -1,22 +1,22 @@
 .thumb
 
-@called from 18AE0
-@r0=#0x0000004  current unit power
-@r1=#0x0000000  unit power boost
-@r2=#0x0000000
+@called from 18B80
+@r0=#0x0000000
+@r1=#0x8BE2250
+@r2=#0x0000001
 @r3=#0x8BE222C
-@r4=#0x3007D08
+@r4=#0x202BD50  character struct
 @r5=#0x203A3F0  attacker struct
-@r6=#0x3007D08
+@r6=#0x202BD50
 @r7=#0x202BD50
-@r8=#0x2022C60
+@r8=#0x000000B
 @r9=#0x0000000
 @r10=#0x0000000
 @r11=#0x3007DFC
 @r12=#0x203A470
-@r13=#0x3007CF0
-@r14=#0x8018AE1
-@r15=#0x8018AE6
+@r13=#0x3007CEC
+@r14=#0x8018B81
+@r15=#0x8018B80
 
 @runs twice.
 @The first time updates the battle stats screen
@@ -46,22 +46,28 @@ EnemyPhase:
 
 CheckCharacter:
     mov     r1,r0               
-    mov     r0,#0x14            @get the power bit
-    ldsb    r0,[r4,r0]          @load the power value
-    ldr     r2,[r5,#0x0]		@load pointer to character data
+    mov     r0,#0x17            @vanilla instruction 1 - get the defense bit
+    ldsb    r0,[r4,r0]          @vanilla instruction 2 - load the defense value
+    ldr     r2,[r5,#0x0]		@vanilla instruction 3 - load pointer to character data
     ldrb	r2,[r2,#0x4]		@load character ID byte
-    cmp		r2,#0x03 			@compare the loaded character ID byte to Lyn's ID
-    beq     ApplyPowerPlus3
+    cmp		r2,#0x03 			@compare the loaded character ID byte to our chosen character's ID
+    beq     CheckBitFlag
     b       End
 
-ApplyPowerPlus3:
-    add     r1,#3               @add three to the power boost
+CheckBitFlag:
+    ldrb    r2,[r5,#0x1C]       @load the value stored in the ballista data we're using for the LuckySeven bitflag
+    cmp     r2,#0x5             @compare it to the value we're using to represent the defense stat
+    beq     BoostDefense        @if there's match then branch to boost the unit's defense
+    b       End                 @else branch to the end
+
+BoostDefense:
+    add     r1,#7               @add 7 to the defense boost
     b       End
 
 End:
-    add     r0,r0,r1            @add the power and boost together for the final total
+    add     r0,r0,r1            @vanilla instruction 4 - add the defense and boost together for the final total
     pop     {r2,r5}
     pop     {r3}
-    pop     {r4}
-    pop     {r1}
+    pop     {r4}                @vanilla instruction 5
+    pop     {r1}                @vanilla instruction 6
     bx      r3

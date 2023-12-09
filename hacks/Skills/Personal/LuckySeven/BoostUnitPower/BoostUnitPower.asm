@@ -18,10 +18,6 @@
 @r14=#0x8018AE1
 @r15=#0x8018AE6
 
-@runs twice.
-@The first time updates the battle stats screen
-@the second time updates the base stats screen
-
 push    {r14}                   @push the link register so we can return at the end
 push    {r0,r1}                 @push these registers, as we'll be using them for the phase check
 ldr		r0,=#0x202BBF8	        @load chapter struct
@@ -45,23 +41,29 @@ EnemyPhase:
     b       CheckCharacter
 
 CheckCharacter:
-    mov     r1,r0               
-    mov     r0,#0x14            @get the power bit
-    ldsb    r0,[r4,r0]          @load the power value
+    mov     r1,r0               @vanilla instruction 1
+    mov     r0,#0x14            @vanilla instruction 2 - get the power bit
+    ldsb    r0,[r4,r0]          @vanilla instruction 3 - load the power value
     ldr     r2,[r5,#0x0]		@load pointer to character data
     ldrb	r2,[r2,#0x4]		@load character ID byte
-    cmp		r2,#0x03 			@compare the loaded character ID byte to Lyn's ID
-    beq     ApplyPowerPlus3
+    cmp		r2,#0x03 			@compare the loaded character ID byte to our chosen character's ID
+    beq     CheckBitFlag
     b       End
 
-ApplyPowerPlus3:
-    add     r1,#3               @add three to the power boost
+CheckBitFlag:
+    ldrb    r2,[r5,#0x1C]       @load the value stored in the ballista data we're using for the LuckySeven bitflag
+    cmp     r2,#0x1             @compare it to the value we're using to represent the power stat
+    beq     BoostPower          @if there's match then branch to boost the unit's power
+    b       End                 @else branch to the end
+
+BoostPower:
+    add     r1,#7               @add 7 to the power boost
     b       End
 
 End:
-    add     r0,r0,r1            @add the power and boost together for the final total
+    add     r0,r0,r1            @vanilla instruction 4 - add the power and boost together for the final total
     pop     {r2,r5}
     pop     {r3}
-    pop     {r4}
-    pop     {r1}
+    pop     {r4}                @vanilla instruction 5
+    pop     {r1}                @vanilla instruction 6
     bx      r3
