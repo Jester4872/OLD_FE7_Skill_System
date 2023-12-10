@@ -25,7 +25,7 @@ Currently, skills must be assigned by defining either a weapon ID or class/chara
 ### Things to consider
 
 - While a skill can technically be applied to multiple units, right now you'll have to add those additional checks yourself
-- This project uses the freespace range #0x8D00000 - #0xDE00000 so make sure it's not conflicting with any other hacks you're using
+- This project uses the freespace range `#0x8D00000 - #0x8E00000` so make sure it's not conflicting with any other hacks you're using
 - Some skills (like the breakers) hook into the same space, so will conflict with each other if you use multiple (currently looking into solution)
 
 ### Skill list
