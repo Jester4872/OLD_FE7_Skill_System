@@ -4,13 +4,29 @@ The aim is to provide a working skill system for fans that prefer FE7 over FE8 (
 
 With the exception of one or two, all skills have been created from scratch.
 
-Currently, skills must be assigned defining either a weapon ID or class/character ID that the skill will activate on. As you can imagine, this involves going into each skill and manually setting the required ASM (though I have made an effort to document what every line does).
+Currently, skills must be assigned by defining either a weapon ID or class/character ID that the skill will activate on. As you can imagine, this involves going into each skill and manually setting the required ASM (though I have made an effort to document what every line does).
 
 ### Target features
 
 - ✓ Document each skill so their workings can be easily understood
 - Outline a graphical space in the stat screen for skills to be shown per unit
 - Investigate an alternative to skills that hook at the same address space
+
+### How to Use
+
+- Locate the ASM file of the skill you want to apply
+- Change the ID of the unit you want to apply it to (most are set to #0x3 which is Lyn)
+- Drag that ASM file onto the AssembleARM.bat file to recompile a new DMP file
+- Uncomment one of the `#include` lines within Buildfile.event (BanditBreaker and the effectiveness table must be paired)
+- Put your base rom in the same folder as the build file and rename it to FE7_clean.gba
+- Drag that GBA file onto the 'MAKE HACK' file which will produce a new GBA file called `FE_Hack.gba` with the skill applied
+- Now when you load that GBA file the skill should work.
+
+### Things to consider
+
+- While a skill can technically be applied to multiple units, right now you'll have to add those additional checks yourself
+- This project uses the freespace range #0x8D00000 - #0xDE00000 so make sure it's not conflicting with any other hacks you're using
+- Some skills (like the breakers) hook into the same space, so will conflict with each other if you use multiple (currently looking into solution)
 
 ### Skill list
 
