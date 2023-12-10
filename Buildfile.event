@@ -8,7 +8,7 @@
 //////////////////////////////////////////////////////////////////
 //// Table edits
 /////////////////////////////////////////////////////////////////
-//#include "Hacks/Others/EffectivenessEditor/EffectivenessEditor.event"                                  
+//#include "Hacks/Other/EffectivenessEditor/EffectivenessEditor.event"                                  
 //MESSAGE installed EffectivenessEditorTable_ 
 //////////////////////////////////////////////////////////////////
 
@@ -99,8 +99,8 @@
 //#include "Hacks/Skills/StandaloneSkills/Covert/Covert.event"                                  
 //MESSAGE installed Covert_
 
-//#include "Hacks/Skills/HPRestorationSkills/Renewal/Renewal.event"                                  
-//MESSAGE installed Renewal_
+#include "Hacks/Skills/HPRestorationSkills/Renewal/Renewal.event"                                  
+MESSAGE installed Renewal_
 
 //#include "Hacks/Skills/PreBattleSkills/Frenzy/Frenzy.event"                                  
 //MESSAGE installed Frenzy_   
