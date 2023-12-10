@@ -1,0 +1,7 @@
+0x8018BA2 MOV r0, #0x18 //Grabs unit resistance
+0x80285F4 STRB r0, [r5, #0x18] //Stores unit resistance (change to 0x14 - strength as an example to make resistance the new strength calculation value)
+
+0x80171B4 MOV r1,r0 //Obtains the item index (for a barrier staff this is fx58 and moves it to r0)
+
+0x802C412 #70 (Higher order nibble (7) determines the status boost to resistance for staff).
+0x802CA84 #70 (Higher order nibble (7) determines the status boost to resistance for pure water).

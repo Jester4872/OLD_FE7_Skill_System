@@ -1,0 +1,71 @@
+[203A3F0 + #0x55] attacker struct tile id
+[203A470 + #0x55] defender struct tile id
+
+FE7 Terrain Values (For use with the terrain** at 0x0202EBB8)
+00 - --
+01 - Plain
+02 - Road
+03 - Village
+04 - Village(untraversable)
+05 - House
+06 - Armory
+07 - Vendor
+08 - Arena
+09 - C.Room
+0A - Fort
+0B - Gate
+0C - Forest
+0D - Thicket
+0E - Sand
+0F - Desert
+10 - River
+11 - Mountain
+12 - Peak
+13 - Bridge
+14 - Bridge(untraversable)
+15 - Sea
+16 - Lake
+17 - Floor
+18 - Floor
+19 - Fence
+1A - Wall
+1B - Wall(breakable)
+1C - Rubble
+1D - Pillar
+1E - Door
+1F - Throne
+20 - Chest
+21 - Chest
+22 - Roof
+23 - Gate
+24 - Church
+25 - Ruins
+26 - Cliff
+27 - Ballista(Shows Ammo -- Remnant from FE6?)
+28 - Long B
+29 - Killer B
+2A - Flat
+2B - Wreck
+2C - --
+2D - Stairs
+2E - --
+2F - Glacier
+30 - Arena(no avoid boost)
+31 - Valley
+32 - Fence
+33 - Snag
+34 - Bridge
+35 - Sky
+36 - Deeps
+37 - Ruins
+38 - Inn
+39 - Barrel
+3A - Bone
+3B - Dark
+3C - Water
+3D - Gunnel
+3E - Deck
+3F - Brace
+40 - Mast
+41 - (Nothing)
+42 - Glitches

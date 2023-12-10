@@ -41,6 +41,7 @@ Currently, skills must be assigned defining either a weapon ID or class/characte
 | Lancebreaker | +20 hit and avoid against lance users
 | Life and Death | +10 to damage taken and received
 | Lifetaker | Nosferatu effect to all this unit's attacks
+| Lucky Seven | Boost one random stat by 7 every turn
 | Mercy | Always leave the enemy with 1 HP
 | Momentum | +1 damage for every square moved by this unit this turn
 | Move + 2 |
