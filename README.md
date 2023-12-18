@@ -4,7 +4,7 @@ The aim is to provide a working skill system for fans that prefer FE7 over FE8 (
 
 With the exception of one or two, all skills have been created from scratch.
 
-Currently, skills must be assigned by defining either a weapon ID or class/character ID that the skill will activate on. As you can imagine, this involves going into each skill and manually setting the required ASM (though I have made an effort to document what every line does).
+Skills can now have their target unit changed ust by editing the name defined in the corresponding event file without needing to recompile any ASM (instructions below). However, only one character/unit can have a skill at a time with the new method (still working on this).
 
 ### Target features
 
@@ -14,10 +14,11 @@ Currently, skills must be assigned by defining either a weapon ID or class/chara
 
 ### How to Use
 
-- Locate the ASM file of the skill you want to apply
-- Change the ID of the unit you want to apply it to (most are set to #0x3 which is Lyn)
-- Drag that ASM file onto the AssembleARM.bat file to recompile a new DMP file
-- Uncomment one of the `#include` lines within Buildfile.event (BanditBreaker and the effectiveness table must be paired)
+- Locate the `.event` file of the skill you wish to use
+- Go to `Event_Assembler\EA Standard Library\FE7 Definitions.txt` to get the list of units to apply skills to
+- They will look like this `#define Eliwood 0x01` (you ust want the name)
+- In the `.event file` for your skill e.g `LifeAndDeath.event` and `WORD` + the name of the unit you grabbed under the `#incbin` line
+- Now uncomment one of the `#include` lines within Buildfile.event (BanditBreaker and the effectiveness table must be paired)
 - Put your base rom in the same folder as the build file and rename it to FE7_clean.gba
 - Drag that GBA file onto the 'MAKE HACK' file which will produce a new GBA file called `FE_Hack.gba` with the skill applied
 - Now when you load that GBA file the skill should work.
