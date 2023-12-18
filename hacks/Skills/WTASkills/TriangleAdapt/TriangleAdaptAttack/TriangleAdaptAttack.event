@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $28B24
 callHack_r3(TriangleAdaptAttack)
-
 POP
-
 ALIGN 4
 TriangleAdaptAttack:
 #incbin "TriangleAdaptAttack.dmp"
+WORD Lyn_t

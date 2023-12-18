@@ -26,10 +26,12 @@ ldsb    r0,[r1,r0]
 b       CheckCharacter
 
 CheckCharacter:
-    push    {r2}
+    push    {r2,r4}
     ldr     r2,[r1,#0x0]    @load pointer to character data
     ldrb	r2,[r2,#0x4]	@load character ID byte
-    cmp		r2,#0x03 		@compare the loaded character ID byte to Lyn's ID
+    mov     r4,r2           @copy over the battle struct to prevent overwriting it
+    ldr     r4,MovePlus2DisplayID   @load the ID value we have defined
+    cmp		r2,r4 			@compare the loaded character ID byte to our chosen character's ID
     beq     ApplyMovePlus2
     b       End
 
@@ -38,7 +40,7 @@ ApplyMovePlus2:
     b       End
 
 End:
-    pop     {r2}
+    pop     {r2,r4}
     add     r0,r0,r3        @add base movement (r3) and bonus movement (r0) together and store in r0
     pop     {r1}            @pop the return address early so the stack pointer (sp) is at the right position
     str     r0,[sp]         @sp = #0x3007D4C
@@ -46,4 +48,7 @@ End:
     str     r5,[sp,#0x4]    @additional vanilla instruction
     bx      r1
 
+.ltorg
+.align
+MovePlus2DisplayID:         @refer to the value defined in the event file
 

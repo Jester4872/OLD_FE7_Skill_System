@@ -25,16 +25,18 @@ ldrb    r0,[r0]                 @load the healing amount of that tile
 b       CheckCharacter
 
 CheckCharacter:
-    push    {r1}
+    push    {r1,r2}
     ldr     r1,[r5]             @load the ROM location of the character's data
     ldrb    r1,[r1,#0x4]        @load the character ID
-    cmp     r1,#0x3             @compare the character ID against your chosen character (Lyn in this case)
+    mov     r2,r1               @copy over the battle struct to prevent overwriting it
+    ldr     r2,RenewalID        @load the ID value we have defined
+    cmp     r1,r2               @compare against our chosen unit ID
     beq     ApplyRenewal        @apply Renewal if there is a match
-    pop     {r1}                @otherwise restore the pushed registers
+    pop     {r1,r2}             @otherwise restore the pushed registers
     b       End                 @and then branch to the end
 
 ApplyRenewal:
-    pop     {r1}                @restore the pushed registers
+    pop     {r1,r2}             @restore the pushed registers
     add     r0,#0x1E            @add a 30% healing boost at the start of the turn
     b       End
 
@@ -43,3 +45,7 @@ End:
     asr     r0,r0,#0x18
     pop     {r3}
     bx      r3
+
+.ltorg
+.align
+RenewalID:                      @refer to the value defined in the event file

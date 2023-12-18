@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $28CE0
 callHack_r3(SacaenHeritage)
-
 POP
-
 ALIGN 4
 SacaenHeritage:
 #incbin "SacaenHeritage.dmp"
+WORD Lyn_t

@@ -19,3 +19,4 @@ POP
 ALIGN 4
 BoostUnitResistance:
 #incbin "BoostUnitResistance.dmp"
+WORD Lyn_t

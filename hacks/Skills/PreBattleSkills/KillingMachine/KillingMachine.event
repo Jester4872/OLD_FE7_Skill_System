@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $28A78
 callHack_r3(KillingMachine)
-
 POP
-
 ALIGN 4
 KillingMachine:
 #incbin "KillingMachine.dmp"
+WORD Lyn_t

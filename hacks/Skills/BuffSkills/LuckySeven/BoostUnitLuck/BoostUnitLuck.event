@@ -19,3 +19,4 @@ POP
 ALIGN 4
 BoostUnitLuck:
 #incbin "BoostUnitLuck.dmp"
+WORD Lyn_t

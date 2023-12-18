@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $16834
 jumpToHack(BanditBreaker)
-
 POP
-
 ALIGN 4
 BanditBreaker:
 #incbin "BanditBreaker.dmp"
+Word Lyn_t

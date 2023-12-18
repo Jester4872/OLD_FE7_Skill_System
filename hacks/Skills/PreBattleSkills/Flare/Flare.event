@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $29294
 callHack_r3(Flare)
-
 POP
-
 ALIGN 4
 Flare:
 #incbin "Flare.dmp"
+WORD Lyn_t

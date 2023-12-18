@@ -22,7 +22,9 @@ push	{r1-r3}
 mov		r3,r0				@copy the attacker/defender struct to another register for use later
 ldr		r2,[r3,#0x0]		@load pointer to character data
 ldrb	r2,[r2,#0x4]		@load character ID byte
-cmp		r2,#0x13 			@compare the loaded character ID byte to Lyn's ID
+mov     r1,r2               @copy over the battle struct to prevent overwriting it
+ldr     r1,DoubleLionID     @load the ID value we have defined
+cmp     r1,r2               @compare against our chosen unit ID
 beq		ApplyBrave			@If lyn, branch to ApplyBrave
 b		End
 
@@ -49,3 +51,7 @@ beq		NewPoint
 ldr		r0,=#0x203A50C				
 ldr		r2,=#0x8029134|1
 bx		r2
+
+.ltorg
+.align
+DoubleLionID:               @refer to the value defined in the event file

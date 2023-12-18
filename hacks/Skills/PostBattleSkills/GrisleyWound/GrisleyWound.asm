@@ -26,12 +26,16 @@ CheckCharacter:
     ldr     r2,=#0x203A3F0
     ldr     r2,[r2,#0x0]
     ldrb    r2,[r2,#0x4]
-    cmp     r2,#0x3
+    mov     r3,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r3,GrisleyWoundID   @load the ID value we have defined
+    cmp     r3,r2               @compare against our chosen unit ID
     beq     CheckAllegiance
     ldr     r2,=#0x203A470
     ldr     r2,[r2,#0x0]
     ldrb    r2,[r2,#0x4]
-    cmp     r2,#0x3
+    mov     r3,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r3,GrisleyWoundID   @load the ID value we have defined
+    cmp     r3,r2               @compare against our chosen unit ID
     beq     CheckAllegiance
     b       End
 
@@ -73,3 +77,7 @@ End:
     lsr     r0,r0,#0x11
     mov     r1,#0x7
     bx      r3
+
+.ltorg
+.align
+GrisleyWoundID:                 @refer to the value defined in the event file

@@ -31,12 +31,16 @@ CheckCharacter:
     ldr     r0,=#0x203A3F0      @check the attacker struct for the character to apply this skill to
     ldr     r0,[r0,#0x0]
     ldrb    r0,[r0,#0x4]
-    cmp     r0,#0x3
+    mov     r3,r0               @copy over the battle struct to prevent overwriting it
+    ldr     r3,BanditBreakerID  @load the ID value we have defined
+    cmp     r3,r0               @compare against our chosen unit ID
     beq     BanditBreaker
     ldr     r0,=#0x203A470      @if we don't find them there, then check the defender struct
     ldr     r0,[r0,#0x0]
     ldrb    r0,[r0,#0x4]
-    cmp     r0,#0x3
+    mov     r3,r0               @copy over the battle struct to prevent overwriting it
+    ldr     r3,BanditBreakerID  @load the ID value we have defined
+    cmp     r3,r0               @compare against our chosen unit ID
     beq     BanditBreaker
     b       End                 @if all else fails, we branch to the end
 
@@ -51,5 +55,6 @@ End:
     ldr     r5,=#0x801683C|1    @hardcode return address since we're using jumphack instead of callhack
     bx      r5
 
-
-
+.ltorg
+.align
+BanditBreakerID:                @refer to the value defined in the event file

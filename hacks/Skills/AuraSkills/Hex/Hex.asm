@@ -22,12 +22,16 @@ push  {r0-r7}
 ldr   r5,=#0x203A3F0                @load the attacker struct
 ldr   r0,[r5,#0x0]                  @load the pointer to the unit's data
 ldrb  r0,[r0,#0x4]                  @load the unit's character ID
-cmp   r0,#0x03                      @compare against a chosen character ID
+mov   r2,r0                         @copy over the battle struct to prevent overwriting it
+ldr   r2,HexID                      @load the ID value we have defined
+cmp   r0,r2                         @compare against a chosen character ID
 beq   StoreCoordinates              @store the unit's coordinates if a match is found, as they are the skill holder
 ldr   r5,=#0x203A470                @load the defender struct
 ldr   r0,[r5,#0x0]                  @load the pointer to the unit's data
 ldrb  r0,[r0,#0x4]                  @load the unit's character ID
-cmp   r0,#0x03                      @compare against a chosen character's ID
+mov   r2,r0                         @copy over the battle struct to prevent overwriting it
+ldr   r2,HexID                      @load the ID value we have defined
+cmp   r0,r2                         @compare against our chosen unit ID
 beq   StoreCoordinates              @store the unit's coordinates if a match is found, as they are the skill holder
 b     LookForSkillHolder            @if all else fails, loop through every character to look for her
 
@@ -37,7 +41,7 @@ StoreCoordinates:
     b     LookForAffectedUnits      @branch to check the range of surronding enemy units that are affected by the skill
 
 LookForSkillHolder:
-    mov r2, #0x03					@character to look for (0x03 for Lyn)
+    ldr r2, HexID                   @load the ID value we have defined
     ldr r3, Unit_Pointers           @load the list of unit pointers inside the ROM (defined at the end of this file)
     mov r6, #0x00                   @r6 will be our counter for unit pointers we've checked
     look_for_unit_skill_user:		@name mangling for copy-pasta-bility
@@ -120,3 +124,7 @@ Unit_Pointers:                      @list of unit pointers in the ROM
 .align
 Unit_Enemy_Pointers:                @list of unit pointers in the RAM (starting from the first enemy on the map)
     .long 0x0202CEC0
+
+.ltorg
+.align
+HexID:                              @refer to the value defined in the event file

@@ -48,7 +48,9 @@ CheckCharacter:
     ldsb    r0,[r4,r0]          @vanilla instruction 1 - load the resistance value
     ldr     r2,[r5,#0x0]		@load pointer to character data
     ldrb	r2,[r2,#0x4]		@load character ID byte
-    cmp		r2,#0x03 			@compare the loaded character ID byte to our chosen character's ID
+    mov     r3,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r3,BoostUnitResistanceID   @load the ID value we have defined
+    cmp		r2,r3 			    @compare the loaded character ID byte to our chosen character's ID
     beq     CheckBitFlag
     b       End
 
@@ -71,3 +73,7 @@ End:
     pop     {r2,r5}
     pop     {r3}
     bx      r3
+
+    .ltorg
+.align
+BoostUnitResistanceID:          @refer to the value defined in the event file

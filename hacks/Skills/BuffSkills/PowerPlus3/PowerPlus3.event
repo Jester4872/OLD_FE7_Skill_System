@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $18AE0
 callHack_r3(PowerPlus3)
-
 POP
-
 ALIGN 4
 PowerPlus3:
 #incbin "PowerPlus3.dmp"
+WORD Lyn_t

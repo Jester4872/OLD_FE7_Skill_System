@@ -36,13 +36,14 @@ b       CheckCharacter
 CheckCharacter:
     ldr     r3,[r0,#0x0]		@load pointer to character data
     ldrb	r3,[r3,#0x4]		@load character ID byte
-    cmp		r3,#0x03 			@compare the loaded character ID byte to our chosen character's ID
+    mov     r2,r3               @copy over the battle struct to prevent overwriting it
+    ldr     r2,LuckySevenID     @load the ID value we have defined
+    cmp		r2,r3 			    @compare the loaded character ID byte to our chosen character's ID
     beq     GetTurnCount        @if it's our chosen character, branch to get the turn count
     b       End                 @otherwise we branch to the end
 
 GetTurnCount:
     mov     r4,r0               @move the character struct into r3
-
     ldr		r0,=#0x202BBF8	    @load chapter struct
     mov		r1,#0x10			@get turn number short
     ldsb	r0,[r0,r1]		    @load turn number
@@ -77,3 +78,7 @@ End:
     pop     {r0-r4}
     ldr     r3,=#0x8018A78|1
     bx      r3
+
+.ltorg
+.align
+LuckySevenID:                   @refer to the value defined in the event file

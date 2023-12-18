@@ -1,0 +1,22 @@
+//FE7 Move + 2
+
+#ifndef _FE7_
+    ERROR "You're not assembling to an FE7 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+//#ifndef FreeSpace
+//    #define FreeSpace 0x1000000
+//    ORG FreeSpace
+//#endif
+
+PUSH
+ORG $1C4DC
+callHack_r3(MovePlus2Field)
+POP
+ALIGN 4
+MovePlus2Field:
+#incbin "MovePlus2Field.dmp"
+WORD Lyn_t

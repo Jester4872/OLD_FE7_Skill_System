@@ -32,16 +32,20 @@ CheckCharacterAtk:
     ldr		r3,=#0x203A3F0	    @load the attacker struct
     ldr		r2,[r3,#0x0]	    @load pointer to character data
     ldrb	r2,[r2,#0x4]	    @load character ID byte
-    cmp		r2,#0x03 		    @compare the loaded character ID byte to Lyn's ID
-    beq		CheckEnemyWeaponDef @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponAtk
+    mov     r3,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r3,AxebreakerID     @load the ID value we have defined
+    cmp     r3,r2               @compare against our chosen unit ID
+    beq		CheckEnemyWeaponDef @if the current ID matches our chosen ID, then branch to CheckEnemyWeaponAtk
     b 		End
 
 CheckCharacterDef:
     ldr		r3,=#0x203A470	    @load the attacker struct
     ldr		r2,[r3,#0x0]	    @load pointer to character data
     ldrb	r2,[r2,#0x4]	    @load character ID byte
-    cmp		r2,#0x03 		    @compare the loaded character ID byte to Lyn's ID
-    beq		CheckEnemyWeaponAtk @if the current ID matches Lyn's ID, then branch to CheckEnemyWeaponDef
+    mov     r3,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r3,AxebreakerID     @load the ID value we have defined
+    cmp     r3,r2               @compare against our chosen unit ID
+    beq		CheckEnemyWeaponAtk @if the current ID matches our chosen ID, then branch to CheckEnemyWeaponDef
     b 		End
 
 CheckEnemyWeaponAtk:
@@ -119,3 +123,7 @@ End:
     and     r0,r1
     pop     {r4}
     bx      r4
+
+.ltorg
+.align
+AxebreakerID:                   @refer to the value defined in the event file

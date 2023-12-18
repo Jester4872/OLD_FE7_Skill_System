@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $29C34
 callHack_r3(GrisleyWound)
-
 POP
-
 ALIGN 4
 GrisleyWound:
 #incbin "GrisleyWound.dmp"
+WORD Lyn_t

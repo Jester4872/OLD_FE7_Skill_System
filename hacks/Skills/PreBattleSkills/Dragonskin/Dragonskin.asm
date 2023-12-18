@@ -27,7 +27,9 @@ b       CheckCharacter
 CheckCharacter:                 
     ldr     r2,[r0,#0x0]        @load the ROM address of the current character
     ldrb    r2,[r2,#0x4]        @load the character ID byte
-    cmp     r2,#0x3             @compare against your chosen character ID byte
+    mov     r1,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r1,DragonskinID     @load the ID value we have defined
+    cmp     r1,r2               @compare against our chosen unit ID
     bne     CheckAllegiance     @if a match if found, branch to check their allegiance
     b       End                 @else branch to the end
 
@@ -60,3 +62,7 @@ End:
     add     r0,#0x1             @vanilla opcode
     strb    r0,[r1]             @vanilla opcode
     bx      r6
+
+.ltorg
+.align
+DragonskinID:                   @refer to the value defined in the event file

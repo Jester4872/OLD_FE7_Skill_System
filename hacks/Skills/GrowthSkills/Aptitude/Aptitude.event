@@ -29,6 +29,7 @@ POP
 ALIGN 4
 Aptitude_HP:
 #incbin "Aptitude_HP.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $296CC
@@ -37,6 +38,7 @@ POP
 ALIGN 4
 Aptitude_Attack:
 #incbin "Aptitude_Attack.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $296E4
@@ -45,6 +47,7 @@ POP
 ALIGN 4
 Aptitude_Skill:
 #incbin "Aptitude_Skill.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $296FC
@@ -53,6 +56,7 @@ POP
 ALIGN 4
 Aptitude_Speed:
 #incbin "Aptitude_Speed.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $29714
@@ -61,6 +65,7 @@ POP
 ALIGN 4
 Aptitude_Defense:
 #incbin "Aptitude_Defense.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $2972C
@@ -69,6 +74,7 @@ POP
 ALIGN 4
 Aptitude_Resistance:
 #incbin "Aptitude_Resistance.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $29744
@@ -77,3 +83,4 @@ POP
 ALIGN 4
 Aptitude_Luck:
 #incbin "Aptitude_Luck.dmp"
+WORD Lyn_t

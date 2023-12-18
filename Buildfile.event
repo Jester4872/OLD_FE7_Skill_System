@@ -33,8 +33,8 @@
 //#include "Hacks/Skills/PostBattleSkills/GoldDigger/GoldDigger.event"
 //MESSAGE installed GoldDigger_
 
-//#include "Hacks/Skills/PreBattleSkills/Vantage/Vantage.event"
-//MESSAGE installed Vantage_
+#include "Hacks/Skills/PreBattleSkills/Vantage/Vantage.event"
+MESSAGE installed Vantage_
 
 //#include "Hacks/Skills/PreBattleSkills/Momentum/Momentum.event"
 //MESSAGE installed Momentum_
@@ -67,7 +67,7 @@
 //MESSAGE installed PowerPlus3_
 
 //#include "Hacks/Skills/BuffSkills/MovePlus2/MovePlus2.event"
-//MESSAGE installed MovePlus2Display_ and MovePlus2Field_
+//MESSAGE installed MovePlus2_
 
 //#include "Hacks/Skills/MovementSkills/Acrobat/Acrobat.event"
 //MESSAGE installed Acrobat_
@@ -99,8 +99,8 @@
 //#include "Hacks/Skills/StandaloneSkills/Covert/Covert.event"                                  
 //MESSAGE installed Covert_
 
-#include "Hacks/Skills/HPRestorationSkills/Renewal/Renewal.event"                                  
-MESSAGE installed Renewal_
+//#include "Hacks/Skills/HPRestorationSkills/Renewal/Renewal.event"                                  
+//MESSAGE installed Renewal_
 
 //#include "Hacks/Skills/PreBattleSkills/Frenzy/Frenzy.event"                                  
 //MESSAGE installed Frenzy_   

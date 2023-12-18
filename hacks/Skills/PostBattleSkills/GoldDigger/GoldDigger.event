@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $288AC
 callHack_r3(GoldDigger)
-
 POP
-
 ALIGN 4
 GoldDigger:
 #incbin "GoldDigger.dmp"
+WORD Lyn_t

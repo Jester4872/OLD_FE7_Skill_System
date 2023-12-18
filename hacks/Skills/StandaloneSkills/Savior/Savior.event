@@ -32,6 +32,7 @@ POP
 ALIGN 4
 Savior_Skill_Graphic_Number:
 #incbin "Savior_Skill_Graphic_Number.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $7FEA0
@@ -40,6 +41,7 @@ POP
 ALIGN 4
 Savior_Skill_Battle_Number_1:
 #incbin "Savior_Skill_Battle_Number_1.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $7FEC0
@@ -48,6 +50,7 @@ POP
 ALIGN 4
 Savior_Skill_Battle_Number_2:
 #incbin "Savior_Skill_Battle_Number_2.dmp"
+WORD Lyn_t
 ////////////////////////////////////////////////
 
 //SPEED
@@ -59,6 +62,7 @@ POP
 ALIGN 4
 Savior_Speed_Graphic_Number:
 #incbin "Savior_Speed_Graphic_Number.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $7FEEC
@@ -67,6 +71,7 @@ POP
 ALIGN 4
 Savior_Speed_Battle_Number_1:
 #incbin "Savior_Speed_Battle_Number_1.dmp"
+WORD Lyn_t
 
 PUSH
 ORG $7FF08
@@ -75,6 +80,7 @@ POP
 ALIGN 4
 Savior_Speed_Battle_Number_2:
 #incbin "Savior_Speed_Battle_Number_2.dmp"
+WORD Lyn_t
 ///////////////////////////////////////////////
 
 //ARROWS
@@ -86,42 +92,5 @@ POP
 ALIGN 4
 Arrow:
 #incbin "Arrow.dmp"
-///////////////////////////////////////////////
-
-
-//STAT BOOSTS
-///////////////////////////////////////////////
-//PUSH
-//ORG $18AE0
-//callHack_r3(PowerPlus1)
-//POP
-//ALIGN 4
-//PowerPlus1:
-//#incbin "Boosts/PowerPlus1.dmp"
-
-//NOT WORKING as there is no 4 aligned space to hook into at the point this is called on a rescuer unit
-//PUSH
-//ORG $18B1C
-//callHack_r3(SkillPlus1)
-//POP
-//ALIGN 4
-//SkillPlus1:
-//#incbin "Boosts/SkillPlus1.dmp"
-
-//NOT WORKING as there is no 4 aligned space to hook into at the point this is called on a rescuer unit
-//PUSH
-//ORG $18B5C
-//jumpToHackr3(SpeedPlus1)
-//POP
-//ALIGN 4
-//SpeedPlus1:
-//#incbin "Boosts/SpeedPlus1.dmp"
-
-PUSH
-ORG $18BC8 
-callHack_r3(LuckPlus1)
-POP
-ALIGN 4
-LuckPlus1:
-#incbin "Boosts/LuckPlus1.dmp"
+WORD Lyn_t
 ///////////////////////////////////////////////

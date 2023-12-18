@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $167C8
 callHack_r3(CloseCounter)
-
 POP
-
 ALIGN 4
 CloseCounter:
 #incbin "CloseCounter.dmp"
+WORD Lyn_t

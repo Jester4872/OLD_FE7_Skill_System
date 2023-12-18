@@ -29,3 +29,4 @@ POP
 ALIGN 4
 Lifetaker:
 #incbin "Lifetaker.dmp"
+WORD Lyn_t

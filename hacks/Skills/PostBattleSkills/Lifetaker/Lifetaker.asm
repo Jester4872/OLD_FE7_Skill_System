@@ -21,7 +21,7 @@
 lsl		r1,r1,#0x2              @vanilla instruction
 ldr     r0,=#0x8BE222C          @vanilla instruction
 add		r1,r1,r0                @vanilla instruction
-push    {r1-r3,r6}              @preserve the value of r2 so we can use this register for character ID checks
+push    {r1-r3,r6,r7}           @preserve the value of r2 so we can use this register for character ID checks
 mov     r6,r0                   @copy the base item struct into another register
 ldrb    r0,[r1,#0x1F]           @vanilla instruction - load the ability byte of the equipped weapon
 b       CheckAttacker
@@ -30,7 +30,9 @@ CheckAttacker:
     ldr     r3,=#0x203A3F0      @load the attacker struct
     ldr		r2,[r3,#0x0]	    @load pointer to character data
     ldrb	r2,[r2,#0x4]	    @load character id byte
-    cmp		r2,#0x03 		    @compare the loaded character ID byte to our chosen character ID
+    mov     r7,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r7,LifetakerID      @load the ID value we have defined
+    cmp     r7,r2               @compare against our chosen unit ID
     beq     CheckItem           @if a match is found, then branch and apply Lifetaker
     b       CheckDefender
 
@@ -38,7 +40,9 @@ CheckDefender:
     ldr     r3,=#0x203A470      @otherwise, load the defender struct
     ldr		r2,[r3,#0x0]	    @load pointer to character data
     ldrb	r2,[r2,#0x4]	    @load character ID byte
-    cmp		r2,#0x03 		    @compare the loaded character ID byte to our chosen character ID
+    mov     r7,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r7,LifetakerID      @load the ID value we have defined
+    cmp     r7,r2               @compare against our chosen unit ID
     beq		CheckItem		    @if a match is found, then branch and apply Lifetaker
     b 		End				    @otherwise, branch to the end of the code
 
@@ -61,6 +65,10 @@ Lifetaker:
     b 		End
 
 End:
-    pop		{r1-r3,r6}          @restore the value that was in r2 originally
+    pop		{r1-r3,r6,r7}       @restore the value that was in r2 originally
     ldr		r3,=#0x8017434|1	@load the return address
     bx		r3                  @branch back to the vanilla function
+
+.ltorg
+.align
+LifetakerID:                    @refer to the value defined in the event file

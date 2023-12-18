@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $28FB8
 callHack_r3(Vantage)
-
 POP
-
 ALIGN 4
 Vantage:
 #incbin "Vantage.dmp"
+WORD Lyn_t

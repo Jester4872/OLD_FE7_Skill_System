@@ -18,50 +18,47 @@
 @r14=#0x8018AE1
 @r15=#0x8018AE6
 
-@runs twice.
-@The first time updates the battle stats screen
-@the second time updates the base stats screen
-
 push    {r14}                   @push the link register so we can return at the end
-push    {r0,r1}                 @push these registers, as we'll be using them for the phase check
-ldr		r0,=#0x202BBF8	        @load chapter struct
-mov		r1,#0xF			        @get turn phase byte
-ldrb	r0,[r0,r1]		        @load turn phase
-cmp		r0,#0x0			        @player phase byte for comparison
-beq		PlayerPhase 	        @if player phase, navigate to PlayerPhase
-cmp		r0,#0x80		        @enemy phase byte for comparison
-beq		EnemyPhase  	        @if enemy phase, load EnemyPhase
-
-PlayerPhase:
-    pop     {r0,r1}             @restore the values of r0,r1 that we pushed
-    push    {r2,r5}             @push r2 and r5, as we'll be using them for the character ID check
-    ldr     r5,=#0x203A3F0      @load the attacker struct to get the player unit
-    b       CheckCharacter
-
-EnemyPhase:
-    pop     {r0,r1}             @restore the values of r0,r1 that we pushed
-    push    {r2,r5}             @push r2 and r5, as we'll be using them for the character ID check
-    ldr     r5,=#0x203A470      @load the defender struct to get the player unit
-    b       CheckCharacter
+push    {r2-r5}                 @push these registers, as we'll be using them for the phase check
+b       CheckCharacter          @branch to check the character ID
 
 CheckCharacter:
-    mov     r1,r0               
-    mov     r0,#0x14            @get the power bit
-    ldsb    r0,[r4,r0]          @load the power value
+    mov     r1,r0               @vanilla instruction 1
+    mov     r0,#0x14            @vanilla instruction 2 - get the power bit
+    ldsb    r0,[r4,r0]          @vanilla instruction 3 - load the power value
+    ldr     r4,=#0x200310C      @if we're looking at the stat screen, r5 won't have the attacker struct so we need to load it 
+    cmp     r4,r5               @check to see if the r5 is now equal to what we have loaded in r4
+    beq     LoadAttackStruct    @if so, we need to load the attack struct
     ldr     r2,[r5,#0x0]		@load pointer to character data
     ldrb	r2,[r2,#0x4]		@load character ID byte
-    cmp		r2,#0x03 			@compare the loaded character ID byte to Lyn's ID
-    beq     ApplyPowerPlus3
-    b       End
+    mov     r4,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r4,PowerPlus3ID     @load the ID value we have defined
+    cmp		r2,r4 			    @compare the loaded character ID byte to our chosen character's ID
+    beq     ApplyPowerPlus3     @if we find a match, apply the power boost
+    b       End                 @otherwise we branch to the end
+
+LoadAttackStruct:
+    ldr     r5,=0x203A3F0     
+    ldr     r2,[r5,#0x0]		@load pointer to character data
+    ldrb	r2,[r2,#0x4]		@load character ID byte
+    mov     r4,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r4,PowerPlus3ID     @load the ID value we have defined
+    cmp		r2,r4 			    @compare the loaded character ID byte to our chosen character's ID
+    beq     ApplyPowerPlus3     @if we find a match, apply the power boost
+    b       End                 @otherwise we branch to the end
 
 ApplyPowerPlus3:
     add     r1,#3               @add three to the power boost
-    b       End
+    b       End                 @then branch to the end
 
 End:
-    add     r0,r0,r1            @add the power and boost together for the final total
-    pop     {r2,r5}
+    add     r0,r0,r1            @vanilla instruction 4 - add the power and boost together for the final total
+    pop     {r2-r5}
     pop     {r3}
-    pop     {r4}
-    pop     {r1}
+    pop     {r4}                @vanilla instruction 5
+    pop     {r1}                @vanilla instruction 6
     bx      r3
+
+.ltorg
+.align
+PowerPlus3ID:                   @refer to the value defined in the event file

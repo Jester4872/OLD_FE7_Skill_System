@@ -30,7 +30,8 @@ ldr     r6,[r6,#0x0]            @load the pointer to character data
 ldrb    r5,[r6,#0x4]            @load the character ID byte
 b       LoadMovementCost        @vanilla instructions to load the movement cost of a tile
 
-LoadMovementCost:               @check the movement cost of each tile and store in unit specific map for retrieval
+@check the movement cost of each tile and store in unit specific map for retrieval
+LoadMovementCost:               
     add     r0,r2,r4
     add     r1,r3,r2
     ldrb    r1,[r1]
@@ -38,7 +39,9 @@ LoadMovementCost:               @check the movement cost of each tile and store 
 
 @realistically this cmp only needs to be checked once per loop. Try to refactor it later
 CheckCharacter:
-    cmp		r5,#0x10 		    @compare the loaded character ID byte to Lyn's ID
+    mov     r6,r5               @copy over the battle struct to prevent overwriting it
+    ldr     r6,AcrobatID        @load the ID value we have defined
+    cmp     r5,r6               @compare against our chosen unit ID
     beq     CanMoveOnTile       @check if the unit can move onto the tile if so
     b       StoreBaseCost       @branch to the end otherwise
 
@@ -67,3 +70,7 @@ End:
     pop    {r5,r6}              @restore the r5 and r6 registers we pushed earlier
     ldr     r4,=#0x8019CF6|1    @the function we bx'd from is complicated to branch back to without a hard-coded address
     bx      r4                  @branch back to the vanilla function
+
+.ltorg
+.align
+AcrobatID:                      @refer to the value defined in the event file

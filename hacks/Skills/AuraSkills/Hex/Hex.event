@@ -23,12 +23,10 @@
 //#endif
 
 PUSH
-
 ORG $17328
 jumpToHackr3(Hex)
-
 POP
-
 ALIGN 4
 Hex:
 #incbin "Hex.dmp"
+WORD Lyn_t

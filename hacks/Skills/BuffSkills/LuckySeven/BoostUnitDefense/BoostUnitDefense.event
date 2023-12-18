@@ -20,3 +20,4 @@ POP
 ALIGN 4
 BoostUnitDefense:
 #incbin "BoostUnitDefense.dmp"
+WORD Lyn_t

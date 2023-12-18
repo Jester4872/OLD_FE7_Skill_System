@@ -18,13 +18,6 @@
 @r14=#0x8028D0D
 @r15=#0x8028D18
 
-@DONE @Check if the unit we're looking at has the skill
-@DONE @store their coordinates if so
-@check in a 3x3 square around them
-@apply +10 critical if there are no ally units in range
-
-@applies twice on player phase
-
 mov  r3,r4                       @vanilla instruction - move the crit rate short from r4 to r3
 add  r3,#0x66                    @vanilla instruction - add the crit rate short to the battle struct
 strh r2,[r3]                     @vanilla instruction - store the crit rate short's value
@@ -33,12 +26,16 @@ push {r0-r7}                     @preserve the values of registers 0-7
 ldr  r3,=#0x203A3F0              @load the attacker struct
 ldr  r0,[r3,#0x0]                @load the RAM unit data from the attacker struct
 ldrb r0,[r0,#0x4]                @load the unit ID
-cmp  r0,#0x3                     @compare against our chosen unit ID
+mov  r2,r0                       @copy over the battle struct to prevent overwriting it
+ldr  r2,FocusID                  @load the ID value we have defined
+cmp  r0,r2                       @compare against our chosen unit ID
 beq  StoreCoordinates            @if it's a match, we store this unit's coordinates
 ldr  r3,=#0x203A470              @load the defender struct
 ldr  r0,[r3,#0x0]                @load the RAM unit data from the defender struct
 ldrb r0,[r0,#0x4]                @load the unit ID
-cmp  r0,#0x3                     @compare against our chosen unit ID
+mov  r2,r0                       @copy over the battle struct to prevent overwriting it
+ldr  r2,FocusID                  @load the ID value we have defined
+cmp  r0,r2                       @compare against our chosen unit ID
 beq  StoreCoordinates            @if it's a match, we store this unit's coordinates
 b    End_Extra_Pop               @if the unit is in neither struct, we branch to the end
 
@@ -134,3 +131,8 @@ End_Extra_Pop:
 .align
 Unit_Pointers:                   @list of unit pointers in the ROM
 	.long 0x08B92EB0
+
+.ltorg
+.align
+FocusID:                        @refer to the value defined in the event file
+

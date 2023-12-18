@@ -29,3 +29,4 @@ POP
 ALIGN 4
 BoostUnitSkill:
 #incbin "BoostUnitSkill.dmp"
+WORD Lyn_t

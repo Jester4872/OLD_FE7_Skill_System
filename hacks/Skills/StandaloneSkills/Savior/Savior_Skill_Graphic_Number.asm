@@ -18,25 +18,32 @@
 @r14=#0x801677B
 @r15=#0x8018AF8
 
-lsl     r0,r0,#0x10
-lsr     r2,r0,#0x10     
+push    {r5}            @push r5 onto the stack so we can use the register for comparison
+lsl     r0,r0,#0x10     @not sure what this does?
+lsr     r2,r0,#0x10     @not sure what this does?
 ldr     r0,[r4,#0xC]    @load unit state word
 mov     r1,#0x10        @move #0x10 into register 1
 ldr     r3,[r7,#0x0]    @load the unit data in the ROM
 ldrb    r3,[r3,#0x4]    @load their character ID
-cmp     r3,#0x17        @does it match our chosen character ID?
+ldr     r5,SaviourSKillID  @load the value we defined in the event file
+cmp     r3,r5           @compare it against our chosen unit ID
 beq     ResetUnitState  @if so, branch to reset the unit state
 ldr     r3,[r4,#0x0]    @load the unit data in the ROM
 ldrb    r3,[r3,#0x4]    @load their character ID
-cmp     r3,#0x17        @does it match our chosen character ID?
+cmp     r3,r5           @compare it against our chosen unit ID
 beq     ResetUnitState  @if so, branch to reset the unit state
 b       End             @otherwise branch to the end
 
 ResetUnitState:
     mov     r3,#0x52    @52 in #0xC represents a 'rescuer' unit. 
     sub     r0,r3       @we subtract it to get 0, or a 'normal' unit
-    b       End
+    b       End         @branch to the end
 
 End:
-    ldr     r3,=#0x8018B00|1
-    bx      r3
+    pop     {r5}        @restore the original value in this register
+    ldr     r3,=#0x8018B00|1    @hardcode the return address, as we're using jumpToHack instead of callToHack
+    bx      r3          @branch back to the vanilla function
+
+.ltorg
+.align
+SaviourSKillID:         @refer to the value defined in the event file

@@ -12,24 +12,5 @@
 //    ORG FreeSpace
 //#endif
 
-PUSH
-
-ORG $7FF98
-callHack_r3(MovePlus2Display)
-
-POP
-
-ALIGN 4
-MovePlus2Display:
-#incbin "MovePlus2Display.dmp"
-
-PUSH
-
-ORG $1C4DC
-callHack_r3(MovePlus2Field)
-
-POP
-
-ALIGN 4
-MovePlus2Field:
-#incbin "MovePlus2Field.dmp"
+#include "MovePlus2Display/MovePlus2Display.event"
+#include "MovePlus2Field/MovePlus2Field.event"

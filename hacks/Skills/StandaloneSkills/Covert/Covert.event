@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $28C5C
 callHack_r3(Covert)
-
 POP
-
 ALIGN 4
 Covert:
 #incbin "Covert.dmp"
+WORD Lyn_t

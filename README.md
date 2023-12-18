@@ -32,8 +32,6 @@ Currently, skills must be assigned by defining either a weapon ID or class/chara
 
 | Name    | Effect
 | ------- | ------
-| Death Blow | +6 attack to the attacking unit
-| Frenzy  | Add the unit's lost HP / 4 to their attack
 | Acrobat | All terrain traversal costs are 1
 | Alert Stance | +20 avoid when selecting the wait command
 | Aptitude | +20% additional growth rates
@@ -43,11 +41,13 @@ Currently, skills must be assigned by defining either a weapon ID or class/chara
 | Bowbreaker | +20 hit and avoid when facing bow users
 | Close Counter | The unit can counterattack at 1-1 range
 | Covert | Double the avoid bonus of the tile the unit is standing on
+| Death Blow | +6 attack to the attacking unit
 | Double Lion | All weapons are treated as if they have the 'brave' effect
 | Dragon Skin | Half all damage to the unit
 | Flare | All the defense of the unit you're attacking (also applies to resistence)
 | Focus | Applies +10 crit to the unit if there are no allies within 3 spaces
 | Fortune | Negate critical attacks on this unit
+| Frenzy  | Add the unit's lost HP / 4 to their attack
 | Galeforce | The unit can move again after defeating an enemy (currently limitless)
 | Gold Digger | +100 gold added after every battle
 | Grisley Wound | Deal 20% of the enemy's health as damage after battle (it cannot kill them)
@@ -75,7 +75,7 @@ Currently, skills must be assigned by defining either a weapon ID or class/chara
 
 ### Additional Stuff
 
-On top of this, I've almost added some extra stuff to expand the functionality of the game
+On top of this, I've also added some extra stuff to expand the functionality of the game
 
 | Name    | Effect
 | ------- | ------

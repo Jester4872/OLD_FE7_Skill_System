@@ -21,9 +21,10 @@
 push  {r0-r4}
 ldr   r1,[r0,#0x0]                  @load the pointer to the unit's data
 ldrb  r1,[r1,#0x4]                  @load the unit's character ID
-cmp   r1,#0x03                      @compare against a chosen character ID
-beq   Get_Turn_Count                @get the turn count for this chapter
-b     End
+ldr   r3,QuickBurnID                @load the value we defined in the event file
+cmp   r3,r1                         @compare it against our chosen unit ID
+beq   Get_Turn_Count                @if a match is found, branch to get the turn count for this chapter
+b     End                           @otherwise, branch to the end
 
 Get_Turn_Count:
     ldr     r1,=#0x202BBF8          @load the chapter struct
@@ -59,3 +60,6 @@ End:
     ldr     r4,=#0x8028A32|1        @harcode the return address as we're using jumpToHack instead of callHack
     bx      r4                      @return to the vanilla function
  
+ .ltorg
+.align
+QuickBurnID:                        @refer to the value defined in the event file

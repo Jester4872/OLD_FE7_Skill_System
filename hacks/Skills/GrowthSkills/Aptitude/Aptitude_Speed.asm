@@ -24,14 +24,19 @@ ldrb    r0,[r0,#0x1F]           @load their Speed growth byte
 b       CheckCharacter
 
 CheckCharacter:
+    push    {r3}                @save the value of r3 to the register so we can use it to load the skill ID
     ldr     r2,[r4,#0x0]        @load the character's unit data from RAM
     ldrb    r2,[r2,#0x4]        @load their character ID byte
-    cmp     r2,#0x03            @check if it matches our chosen character ID
+    mov     r3,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r3,Apptitude_SpeedID   @load the ID value we have defined
+    cmp		r2,r3 			    @compare the loaded character ID byte to our chosen character's ID
     beq     Aptitude_Speed      @branch and apply the growth boost if so
     ldr     r2,[r7,#0x0]        @otherwise check the other battle struct for the same data
     ldrb    r2,[r2,#0x4]
-    cmp     r2,#0x03
-    beq     Aptitude_Speed
+    mov     r3,r2               @copy over the battle struct to prevent overwriting it
+    ldr     r3,Apptitude_SpeedID   @load the ID value we have defined
+    cmp		r2,r3 			    @compare the loaded character ID byte to our chosen character's ID
+    beq     Aptitude_Speed      @branch and apply the growth boost if so
     b       End                 @if the character we need is in neither, branch to the end
 
 Aptitude_Speed:
@@ -40,8 +45,13 @@ Aptitude_Speed:
     b       End
 
 End:
+    pop     {r3}
     add     r0,#0x10            @vanilla opcode
     ldr     r2,=#0x8029708|1    @hardcode the link register back to its original value as it's needed in GetStatIncrease and it's been overwritten with this hack
     mov     r14,r2
     ldr     r2,=#0x80295E0|1    @hardcoded return address
     bx      r2                  @branch back to the vanilla function
+
+.ltorg
+.align
+Apptitude_SpeedID:              @refer to the value defined in the event file

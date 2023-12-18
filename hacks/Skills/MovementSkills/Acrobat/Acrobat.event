@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $19CE8
 callHack_r1(Acrobat)
-
 POP
-
 ALIGN 4
 Acrobat:
 #incbin "Acrobat.dmp"
+WORD Lyn_t

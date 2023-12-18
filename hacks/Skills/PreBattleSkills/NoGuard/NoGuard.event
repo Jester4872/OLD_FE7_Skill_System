@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $28D78
 callHack_r3(NoGuard)
-
 POP
-
 ALIGN 4
 NoGuard:
 #incbin "NoGuard.dmp"
+WORD Lyn_t

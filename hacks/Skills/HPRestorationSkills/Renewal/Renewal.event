@@ -13,12 +13,10 @@
 //#endif
 
 PUSH
-
 ORG $19B20
 jumpToHack(Renewal)
-
 POP
-
 ALIGN 4
 Renewal:
 #incbin "Renewal.dmp"
+WORD Lyn_t

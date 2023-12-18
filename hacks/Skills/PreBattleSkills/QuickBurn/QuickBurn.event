@@ -23,12 +23,10 @@
 //#endif
 
 PUSH
-
 ORG $28A28
 jumpToHackr4(QuickBurn)
-
 POP
-
 ALIGN 4
 QuickBurn:
 #incbin "QuickBurn.dmp"
+WORD Lyn_t
