@@ -16,8 +16,8 @@ Skills can now have their target unit changed ust by editing the name defined in
 
 - Locate the `.event` file of the skill you wish to use
 - Go to `Event_Assembler\EA Standard Library\FE7 Definitions.txt` to get the list of units to apply skills to
-- They will look like this `#define Eliwood 0x01` (you ust want the name)
-- In the `.event file` for your skill e.g `LifeAndDeath.event` and `WORD` + the name of the unit you grabbed under the `#incbin` line
+- They will look like this `#define Eliwood 0x01` (you just want the name)
+- In the `.event file` for your skill e.g `LifeAndDeath.event` add `WORD` + the name of the unit you grabbed under the `#incbin` line
 - Now uncomment one of the `#include` lines within Buildfile.event (BanditBreaker and the effectiveness table must be paired)
 - Put your base rom in the same folder as the build file and rename it to FE7_clean.gba
 - Drag that GBA file onto the 'MAKE HACK' file which will produce a new GBA file called `FE_Hack.gba` with the skill applied
