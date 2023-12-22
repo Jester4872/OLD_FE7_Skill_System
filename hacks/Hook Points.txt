@@ -16,8 +16,9 @@ AlertStanceSetBit
 #294B8
 Armsthrift
 
-#29284
+#29294
 Flare
+Decadence
 
 #28C5C
 Covert
@@ -88,6 +89,7 @@ GrisleyWound
 
 #293A0
 Dragonskin
+Decadence
 
 #16834
 BanditBreaker

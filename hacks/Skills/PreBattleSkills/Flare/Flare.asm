@@ -40,7 +40,7 @@ CheckCharacter:
     ldr     r2,[r0,#0x0]	@load pointer to character data
     ldrb	r2,[r2,#0x4]	@load character ID byte
     mov     r4,r2           @copy over the battle struct to prevent overwriting it
-    ldr     r4,FlareID      @load the ID value we have defined
+    ldr     r4,DecadenceID  @load the ID value we have defined
     cmp     r4,r2           @compare against our chosen unit ID
     beq     CheckBitFlag    @branch to ignore defense if it is our chosen ID
     b       SubtractDefense @otherwise we perform the normal operation and subtract defense

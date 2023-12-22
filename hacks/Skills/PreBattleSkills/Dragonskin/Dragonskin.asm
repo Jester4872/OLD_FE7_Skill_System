@@ -17,9 +17,6 @@
 @r13=#0x3007CE0
 @r14=#0x802950F
 
-@works but doesn't currently display the halved damage in the forecast
-@even editing the data to half the enemy's damage at the forecast damage breakpoint isn't affecting the final score
-
 push    {r14}
 push    {r1-r3}
 b       CheckCharacter

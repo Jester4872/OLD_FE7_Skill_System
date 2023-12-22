@@ -138,5 +138,8 @@
 //#include "Hacks/Skills/AuraSkills/Focus/Focus.event"                                  
 //MESSAGE installed Focus_
 
-#include "Hacks/Skills/PreBattleSkills/LifeAndDeath/LifeAndDeath.event"                                  
-MESSAGE installed LifeAndDeath_
+//#include "Hacks/Skills/PreBattleSkills/LifeAndDeath/LifeAndDeath.event"                                  
+//MESSAGE installed LifeAndDeath_
+
+//#include "Hacks/Skills/PreBattleSkills/Decadence/Decadence.event"                                  
+//MESSAGE installed Decadence_
