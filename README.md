@@ -36,6 +36,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Acrobat | All terrain traversal costs are 1
 | Alert Stance | +20 avoid when selecting the wait command
 | Aptitude | +20% additional growth rates
+| Armored Blow | +6 defense to the attacking unit
 | Armsthift | Luck * 2 % chance of conserving a weapon use
 | Axebreaker | +20 hit and avoid when facing axe users
 | Banditbreaker | Effective damage against brigands, pirates and berserkers

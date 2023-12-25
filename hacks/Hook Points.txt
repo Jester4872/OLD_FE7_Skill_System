@@ -154,3 +154,6 @@ LifeAndDeath
 
 #18A70
 LuckySeven
+
+#28AE8
+ArmoredBlow

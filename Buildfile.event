@@ -150,5 +150,8 @@
 //#include "Hacks/Skills/BuffSkills/CriticalForce/CriticalForce.event"                                  
 //MESSAGE installed CriticalForce_
 
-#include "Hacks/Skills/ProcSkills/Colossus/Colossus.event"                                  
-MESSAGE installed Colossus_
+//#include "Hacks/Skills/ProcSkills/Colossus/Colossus.event"                                  
+//MESSAGE installed Colossus_
+
+#include "Hacks/Skills/PreBattleSkills/ArmoredBlow/ArmoredBlow.event"                                  
+MESSAGE installed ArmoredBlow_
