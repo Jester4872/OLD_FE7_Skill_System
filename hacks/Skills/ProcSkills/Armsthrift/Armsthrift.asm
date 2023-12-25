@@ -30,12 +30,12 @@ push    {r1,r3}                 @push the first three registers so we can use th
 ldr		r1,[r5]				    @load the pointer to character data	
 ldrb	r1,[r1,#0x4]		    @load the character ID byte
 cmp		r1, #0x03			    @compare the loaded character ID byte to Lyn's ID
-beq     LoadAttacker            @branch to and calculate whether to apply skill if Lyn is active
+beq     LoadAttacker            @branch to and calculate whether to apply skill of our chosen unit
 ldr		r1,[r7]				    @load the pointer to character data	
 ldrb	r1,[r1,#0x4]		    @load the character ID byte
 ldr     r3,ArmsthriftID         @load the value we defined in the event file
 cmp     r3,r1                   @compare it against our chosen unit ID
-beq     LoadDefender            @branch and calculate whether to apply skill if Lyn is active
+beq     LoadDefender            @branch and calculate whether to apply skill of our chosen unit
 b       End                     @branch to the end
 
 LoadAttacker:

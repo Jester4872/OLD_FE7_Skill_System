@@ -41,6 +41,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Banditbreaker | Effective damage against brigands, pirates and berserkers
 | Bowbreaker | +20 hit and avoid when facing bow users
 | Close Counter | The unit can counterattack at 1-1 range
+| Colossus | Skill % chance of tripling strength in combat
 | Covert | Double the avoid bonus of the tile the unit is standing on
 | Critical Force | Base crit rate is 1.5x skill
 | Death Blow | +6 attack to the attacking unit

@@ -15,6 +15,7 @@ AlertStanceSetBit
 
 #294B8
 Armsthrift
+Colossus
 
 #29294
 Flare

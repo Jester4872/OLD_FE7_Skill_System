@@ -147,5 +147,8 @@
 //#include "Hacks/Skills/PreBattleSkills/Decadence/Decadence.event"                                  
 //MESSAGE installed Decadence_
 
-#include "Hacks/Skills/BuffSkills/CriticalForce/CriticalForce.event"                                  
-MESSAGE installed CriticalForce_
+//#include "Hacks/Skills/BuffSkills/CriticalForce/CriticalForce.event"                                  
+//MESSAGE installed CriticalForce_
+
+#include "Hacks/Skills/ProcSkills/Colossus/Colossus.event"                                  
+MESSAGE installed Colossus_
