@@ -42,6 +42,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Bowbreaker | +20 hit and avoid when facing bow users
 | Close Counter | The unit can counterattack at 1-1 range
 | Covert | Double the avoid bonus of the tile the unit is standing on
+| Critical Force | Base crit rate is 1.5x skill
 | Death Blow | +6 attack to the attacking unit
 | Decadence | The unit always deals 10 damage per normal attack
 | Double Lion | All weapons are treated as if they have the 'brave' effect

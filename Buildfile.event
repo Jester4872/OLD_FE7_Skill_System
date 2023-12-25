@@ -93,7 +93,7 @@
 //#include "Hacks/Skills/PreBattleSkills/NoGuard/NoGuard.event"                                  
 //MESSAGE installed NoGuard_
 
-//#include "Hacks/Skills/PreBattleSkills/KillingMachine/KillingMachine.event"                                  
+//#include "Hacks/Skills/BuffSkills/KillingMachine/KillingMachine.event"                                  
 //MESSAGE installed KillingMachine_
 
 //#include "Hacks/Skills/StandaloneSkills/Covert/Covert.event"                                  
@@ -120,6 +120,9 @@
 //#include "Hacks/Other/NegativeStatBoosts_Contro/NegativeStatBoosts.event"
 //MESSAGE installed NegativeStatBoosts_
 
+//#include "Hacks/Skills/DebuffSkills/SealStrength/SealStrength.event"
+//MESSAGE installed SealStrength_
+
 //#include "Hacks/Skills/AuraSkills/Hex/Hex.event"                                  
 //MESSAGE installed Hex_
 
@@ -143,3 +146,6 @@
 
 //#include "Hacks/Skills/PreBattleSkills/Decadence/Decadence.event"                                  
 //MESSAGE installed Decadence_
+
+#include "Hacks/Skills/BuffSkills/CriticalForce/CriticalForce.event"                                  
+MESSAGE installed CriticalForce_

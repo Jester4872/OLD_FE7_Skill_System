@@ -4,13 +4,23 @@
 // Display Negative Stat Boosts correctly.
 // Hack by circleseverywhere
 
+//Takes 0x8 bytes
+#define jumpToHackr0(offset) "BYTE 0x00 0x48 0x00 0x47; POIN (offset|0x1)"
+#define jumpToHackr1(offset) "BYTE 0x00 0x49 0x08 0x47; POIN (offset|0x1)"
+#define jumpToHackr2(offset) "BYTE 0x00 0x4A 0x10 0x47; POIN (offset|0x1)" 
+#define jumpToHackr3(offset) "BYTE 0x00 0x4B 0x18 0x47; POIN (offset|0x1)"
+#define jumpToHackr4(offset) "BYTE 0x00 0x4C 0x20 0x47; POIN (offset|0x1)"
+#define jumpToHackr5(offset) "BYTE 0x00 0x4D 0x28 0x47; POIN (offset|0x1)"
+#define jumpToHackr6(offset) "BYTE 0x00 0x4E 0x30 0x47; POIN (offset|0x1)" 
+#define jumpToHackr7(offset) "BYTE 0x00 0x4F 0x38 0x47; POIN (offset|0x1)"
+
 #ifdef _FE7_
 
   {
 
   PUSH
     ORG $6240
-      jumpToHack(NegStatBoosts)
+      jumpToHackr3(NegStatBoosts)
       PROTECT $6240 currentOffset
 
     ORG $B8BF6C //minus sign position fix
@@ -19,7 +29,7 @@
 
     ORG $7f800 //drawing the bars
       //SHORT $46C0
-      jumpToHack(NegativeStatBars)
+      jumpToHackr3(NegativeStatBars)
       PROTECT $7f800 currentOffset
   POP
 
