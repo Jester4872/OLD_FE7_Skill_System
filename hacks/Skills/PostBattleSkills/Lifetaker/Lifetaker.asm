@@ -61,7 +61,7 @@ CheckItem:
 
 Lifetaker:
     pop     {r4,r5}
-    mov		r0,#0x02	        @load the byte into r0 that controls the nosferatu effect
+    mov		r0,#0x02	        @load the byte into r0 that controls the nosferatu effect (the FE7 decomp in FEBuilder and the Teq doc seem to be working off of FE8, so they're not accurate for FE7)
     b 		End
 
 End:
