@@ -161,3 +161,6 @@ ArmoredBlow
 
 #293F8
 DevilEffectAlteration
+
+#2FA20
+Despoil

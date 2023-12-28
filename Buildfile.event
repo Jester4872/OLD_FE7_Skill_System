@@ -156,5 +156,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PreBattleSkills/ArmoredBlow/ArmoredBlow.event"                                  
 //MESSAGE installed ArmoredBlow_
 
-#include "Hacks/Skills/PreBattleSkills/Counter/Counter.event"                                  
-MESSAGE installed Counter_ 
+//#include "Hacks/Skills/PreBattleSkills/Counter/Counter.event"                                  
+//MESSAGE installed Counter_ 
+
+#include "Hacks/Skills/PostBattleSkills/Despoil/Despoil.event"                                  
+MESSAGE installed Despoil_

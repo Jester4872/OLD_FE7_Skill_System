@@ -48,6 +48,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Critical Force | Base crit rate is 1.5x skill
 | Death Blow | +6 attack to the attacking unit
 | Decadence | The unit always deals 10 damage per normal attack
+| Despoil | A luck % chance to obtain a Red Gem on killing an enemy
 | Double Lion | All weapons are treated as if they have the 'brave' effect
 | Dragon Skin | Half all damage to the unit
 | Flare | All the defense of the unit you're attacking (also applies to resistence)
