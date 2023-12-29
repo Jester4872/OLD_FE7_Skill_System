@@ -162,5 +162,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/ProcSkills/Despoil/Despoil.event"                                  
 //MESSAGE installed Despoil_
 
-#include "Hacks/Skills/PostBattleSkills/BlackMagic/BlackMagic.event"                                  
-MESSAGE installed BlackMagic_
+//#include "Hacks/Skills/PostBattleSkills/BlackMagic/BlackMagic.event"                                  
+//MESSAGE installed BlackMagic_
+
+#include "Hacks/Skills/BuffSkills/HeavyStrikes/HeavyStrikes.event"                                  
+MESSAGE installed HeavyStrikes_

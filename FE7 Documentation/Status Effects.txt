@@ -7,4 +7,9 @@ Status effects (assuming one turn duration)
 
 0x11 - Poison
 0x12 - Sleep
-
+0x13 - Silence
+0x14 - Berserk
+0x15 - Attack boost (+10)
+0x16 - Defense boost (+10)
+0x17 - Critical boost (+10)
+0x18 - Dodge boost (+10)

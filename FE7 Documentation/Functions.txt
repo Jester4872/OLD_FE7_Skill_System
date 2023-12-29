@@ -16,3 +16,36 @@ GetStatIncrease:
     080295FE BC10   POP {r4}
     08029600 BC02   POP {r1}
     08029602 4708   BX r1
+
+# Supply the allegiance byte for the unit in r0.
+# r0 will then return the character struct for that unit
+GetUnitStruct:
+    08018D0C 4A03   ldr r2, [pc, #0xc] # pointer:08018D1C -> 08B92EB0 (RAMSlotTable This is a table of pointers, with one for every deployment slot in RAM )   //GetUnitStruct
+    08018D0E 21FF   mov r1, #0xff
+    08018D10 4001   and r1 ,r0
+    08018D12 0089   lsl r1 ,r1 ,#0x2
+    08018D14 1889   add r1 ,r1, r2
+    08018D16 6808   ldr r0, [r1, #0x0] # pointer:08B92EB0 (RAMSlotTable This is a table of pointers, with one for every deployment slot in RAM ) -> 00000000
+    08018D18 4770   bx lr
+
+# Random number is chosen between 0-99 and is returned in r0
+GetRandomNumber:
+    08000E04 B580   push {r7,lr}   //geneateRN100 int
+    08000E06 466F   mov r7, sp
+    08000E08 F7FF FEEA   bl 0x08000be0   //geneateRN65536 int
+    08000E0C 2264   mov r2, #0x64
+    08000E0E 1C01   mov r1 ,r0
+    08000E10 4351   mul r1 ,r2
+    08000E12 1C08   mov r0 ,r1
+    08000E14 2800   cmp r0, #0x0
+    08000E16 DA01   bge #0x8000e1c
+        08000E18 4902   ldr r1, [pc, #0x8] # pointer:08000E24 -> 0000FFFF
+        08000E1A 1840   add r0 ,r0, r1
+    08000E1C 1401   asr r1 ,r0 ,#0x10
+    08000E1E 1C08   mov r0 ,r1
+    08000E20 E002   b 0x8000e28
+    08000E22 0000   nop
+    08000E24 FFFF 0000   //LDRDATA
+    08000E28 BC80   pop {r7}
+    08000E2A BC02   pop {r1}
+    08000E2C 4708   bx r1

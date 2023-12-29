@@ -59,6 +59,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Galeforce | The unit can move again after defeating an enemy (currently limitless)
 | Gold Digger | +100 gold added after every battle
 | Grisley Wound | Deal 20% of the enemy's health as damage after battle (it cannot kill them)
+| Heavy Strikes | Add the skill holder's equipped item's weight to their critical hit rate
 | Hex | -15 avoid to all enemy units within 3 spaces of this unit
 | HP + 5 |
 | Killing Machine | Doubles critical hit rate (bonuses included)

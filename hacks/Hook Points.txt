@@ -52,6 +52,7 @@ HPPlus5
 #28A78
 KillingMachine
 CriticalForce
+HeavyStrikes
 
 #1742C
 Lifetaker
