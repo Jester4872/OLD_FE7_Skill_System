@@ -134,5 +134,5 @@ Unit_Pointers:                   @list of unit pointers in the ROM
 
 .ltorg
 .align
-FocusID:                        @refer to the value defined in the event file
+FocusID:                         @refer to the value defined in the event file
 

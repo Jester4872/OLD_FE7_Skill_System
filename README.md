@@ -40,6 +40,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Armsthift | Luck * 2 % chance of conserving a weapon use
 | Axebreaker | +20 hit and avoid when facing axe users
 | Banditbreaker | Effective damage against brigands, pirates and berserkers
+| Black Magic | Inflict a random negative status on the enemy for 3 turns after battle
 | Bowbreaker | +20 hit and avoid when facing bow users
 | Close Counter | The unit can counterattack at 1-1 range
 | Colossus | Skill % chance of tripling strength in combat

@@ -159,5 +159,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PreBattleSkills/Counter/Counter.event"                                  
 //MESSAGE installed Counter_ 
 
-#include "Hacks/Skills/PostBattleSkills/Despoil/Despoil.event"                                  
-MESSAGE installed Despoil_
+//#include "Hacks/Skills/ProcSkills/Despoil/Despoil.event"                                  
+//MESSAGE installed Despoil_
+
+#include "Hacks/Skills/PostBattleSkills/BlackMagic/BlackMagic.event"                                  
+MESSAGE installed BlackMagic_

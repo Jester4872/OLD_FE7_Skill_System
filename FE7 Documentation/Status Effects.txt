@@ -1,0 +1,10 @@
+0x30 in the character struct controls the status for a character.
+
+The first bit (the higher order nibble) controls the status duration
+the second bit (the lower order nibble) controls the status effect
+
+Status effects (assuming one turn duration)
+
+0x11 - Poison
+0x12 - Sleep
+

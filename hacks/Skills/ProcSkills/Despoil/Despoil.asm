@@ -22,6 +22,9 @@
 # and then set their last item to a red gem.
 # Also call the random number function so the chance of the above happening is based on luck
 
+# Currently I suspect this implementation will override any items that the enemy of the skill holder may drop on death
+# I need to call the GetItem event somehow, but it doesn't look as straightforward as the FE8 version
+
 .equ GetRandomNumber, 0x08000E04
 
 .macro blh to, reg                  @special macro opcode so we can use bx and return afterwards to our branch point via blh
