@@ -44,6 +44,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Bowbreaker | +20 hit and avoid when facing bow users
 | Close Counter | The unit can counterattack at 1-1 range
 | Colossus | Skill % chance of tripling strength in combat
+| Corrosion | Reduce the enemy's weapon uses by 5 every battle
 | Counter | Reflect the foes attacks back at them (need to set range and weapon type limitations)
 | Covert | Double the avoid bonus of the tile the unit is standing on
 | Critical Force | Base crit rate is 1.5x skill

@@ -165,5 +165,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PostBattleSkills/BlackMagic/BlackMagic.event"                                  
 //MESSAGE installed BlackMagic_
 
-#include "Hacks/Skills/BuffSkills/HeavyStrikes/HeavyStrikes.event"                                  
-MESSAGE installed HeavyStrikes_
+//#include "Hacks/Skills/BuffSkills/HeavyStrikes/HeavyStrikes.event"                                  
+//MESSAGE installed HeavyStrikes_
+
+#include "Hacks/Skills/PostBattleSkills/Corrosion/Corrosion.event"                                  
+MESSAGE installed Corrosion_

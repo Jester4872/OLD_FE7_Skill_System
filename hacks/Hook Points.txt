@@ -16,6 +16,7 @@ AlertStanceSetBit
 #294B8
 Armsthrift
 Colossus
+Corrosion
 
 #29294
 Flare
