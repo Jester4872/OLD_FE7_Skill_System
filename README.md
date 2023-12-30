@@ -48,6 +48,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Counter | Reflect the foes attacks back at them (need to set range and weapon type limitations)
 | Covert | Double the avoid bonus of the tile the unit is standing on
 | Critical Force | Base crit rate is 1.5x skill
+| Dazzle | The enemy cannot counterattack this unit
 | Death Blow | +6 attack to the attacking unit
 | Decadence | The unit always deals 10 damage per normal attack
 | Despoil | A luck % chance to obtain a Red Gem on killing an enemy

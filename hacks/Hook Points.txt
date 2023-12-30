@@ -167,3 +167,6 @@ DevilEffectAlteration
 
 #2FA20
 Despoil
+
+#288D8
+Dazzle
