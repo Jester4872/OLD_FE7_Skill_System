@@ -177,5 +177,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PreBattleSkills/VengefulFighter/VengefulFighter.event"                                  
 //MESSAGE installed VengefulFighter_
 
-#include "Hacks/Skills/PreBattleSkills/BoldFighter/BoldFighter.event"                                  
-MESSAGE installed BoldFighter_
+//#include "Hacks/Skills/PreBattleSkills/BoldFighter/BoldFighter.event"                                  
+//MESSAGE installed BoldFighter_
+
+#include "Hacks/Skills/PostBattleSkills/Enrage/Enrage.event"                                  
+MESSAGE installed Enrage_

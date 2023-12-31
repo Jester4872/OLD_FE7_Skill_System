@@ -18,10 +18,6 @@
 @r14=#0x802FA1B
 @r15=#0x802FA20
 
-# change the byte for 0xD in the character struct of the killed unit to 0x10 to trigger the droppable item flag
-# and then set their last item to a red gem.
-# Also call the random number function so the chance of the above happening is based on luck
-
 # Currently I suspect this implementation will override any items that the enemy of the skill holder may drop on death
 # I need to call the GetItem event somehow, but it doesn't look as straightforward as the FE8 version
 

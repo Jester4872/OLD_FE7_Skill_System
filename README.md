@@ -55,6 +55,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Despoil | A luck % chance to obtain a Red Gem on killing an enemy
 | Double Lion | All weapons are treated as if they have the 'brave' effect
 | Dragon Skin | Half all damage to the unit
+| Enrage | Inflict Berserk on the enemy for 3 turns after battle
 | Flare | All the defense of the unit you're attacking (also applies to resistence)
 | Focus | Applies +10 crit to the unit if there are no allies within 3 spaces
 | Fortune | Negate critical attacks on this unit

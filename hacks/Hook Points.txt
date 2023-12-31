@@ -92,6 +92,7 @@ CloseCounter
 #29C34
 GrisleyWound
 BlackMagic
+Enrage
 
 #293A0
 Dragonskin
