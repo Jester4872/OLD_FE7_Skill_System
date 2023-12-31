@@ -94,6 +94,7 @@ GrisleyWound
 BlackMagic
 Enrage
 Drowsy
+PoisonPoint
 
 #293A0
 Dragonskin

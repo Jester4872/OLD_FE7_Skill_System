@@ -183,5 +183,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PostBattleSkills/Enrage/Enrage.event"                                  
 //MESSAGE installed Enrage_
 
-#include "Hacks/Skills/PostBattleSkills/Drowsy/Drowsy.event"                                  
-MESSAGE installed Drowsy_
+//#include "Hacks/Skills/PostBattleSkills/Drowsy/Drowsy.event"                                  
+//MESSAGE installed Drowsy_
+
+#include "Hacks/Skills/PostBattleSkills/PoisonPoint/PoisonPoint.event"                                  
+MESSAGE installed PoisonPoint_

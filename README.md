@@ -77,6 +77,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Move + 2 |
 | No Guard | Both this unit and the enemy have 100% hit rates
 | Paragon | Double experience gain
+| Poison Point | Inflict poison on the enemy for 3 turns after battle
 | Power + 3 |
 | Quick Burn | +15 hit and avoid at the start of the map, -1 each turn
 | Renewal | This units regains 30% of their HP at the start of their turn
