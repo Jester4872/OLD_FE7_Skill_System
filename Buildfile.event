@@ -171,5 +171,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PostBattleSkills/Corrosion/Corrosion.event"                                  
 //MESSAGE installed Corrosion_
 
-#include "Hacks/Skills/PreBattleSkills/Dazzle/Dazzle.event"                                  
-MESSAGE installed Dazzle_
+//#include "Hacks/Skills/PreBattleSkills/Dazzle/Dazzle.event"                                  
+//MESSAGE installed Dazzle_
+
+#include "Hacks/Skills/PreBattleSkills/VengefulFighter/VengefulFighter.event"                                  
+MESSAGE installed VengefulFighter_

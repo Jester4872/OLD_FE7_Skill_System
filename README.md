@@ -83,6 +83,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Sword Breaker | +20 hit and avoid when fighting sword users
 | Triangle Adapt | Doubles the effects of any triangle effects this unit gives and receives
 | Vantage | If attacked, this unit will attack first
+| Veneful Fighter | The unit attacks twice if they're defending
 
 ### Additional Stuff
 

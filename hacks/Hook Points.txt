@@ -170,3 +170,6 @@ Despoil
 
 #288D8
 Dazzle
+
+#28FF4
+VengefulFighter
