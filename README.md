@@ -84,6 +84,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Sacaen Heritage | +20 avoid when fighting on plains tiles
 | Savior | Ignore rescue penalties
 | Slow Burn | +1 hit and avoid each turn up to a maximum of 15
+| Shush | Inflict Silence on the enemy for 3 turns after battle
 | Sword Breaker | +20 hit and avoid when fighting sword users
 | Triangle Adapt | Doubles the effects of any triangle effects this unit gives and receives
 | Vantage | If defending, this unit will attack first

@@ -58,7 +58,7 @@ CheckAllegiance:
 Enrage:
     mov     r7,r1               @copy the skill holder's enemy battle struct location into a free register so it isn't overwritten
     mov     r5,#0x30            @Lower order nibble is status, higher order nibble is status duration (the first number is the higher-order nibble, and the second is the lower-order nibble)
-    mov     r1,#0x4             @get the byte for berserk
+    mov     r1,#0x4             @get the byte for enrage
     mov     r3,#0x30            @get the status duration and set it to 3 turns            
     add     r6,r3,r1            @add the status duration and status effect together and store in r6 as r3 will be overwritten by GetUnitStruct
     ldrb    r0,[r7,#0xB]        @load the deployment ID byte of the enemy unit

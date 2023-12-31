@@ -186,5 +186,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PostBattleSkills/Drowsy/Drowsy.event"                                  
 //MESSAGE installed Drowsy_
 
-#include "Hacks/Skills/PostBattleSkills/PoisonPoint/PoisonPoint.event"                                  
-MESSAGE installed PoisonPoint_
+//#include "Hacks/Skills/PostBattleSkills/PoisonPoint/PoisonPoint.event"                                  
+//MESSAGE installed PoisonPoint_
+
+#include "Hacks/Skills/PostBattleSkills/Shush/Shush.event"                                  
+MESSAGE installed Shush_

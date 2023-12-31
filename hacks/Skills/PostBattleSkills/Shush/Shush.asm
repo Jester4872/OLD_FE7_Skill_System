@@ -35,14 +35,14 @@ CheckCharacter:
     ldr     r2,[r2,#0x0]        @load the ROM location of this attacker's data
     ldrb    r2,[r2,#0x4]        @load their character ID byte
     mov     r3,r2               @copy over the battle struct to prevent overwriting it
-    ldr     r3,PoisonPointID    @load the ID value we have defined
+    ldr     r3,ShushID          @load the ID value we have defined
     cmp     r3,r2               @compare against our chosen unit ID
     beq     CheckAllegiance     @if a match is found, branch to check their allegiance
     ldr     r2,=#0x203A470      @if not, load the defender struct and repeat the process
     ldr     r2,[r2,#0x0]        
     ldrb    r2,[r2,#0x4]        
     mov     r3,r2               
-    ldr     r3,PoisonPointID     
+    ldr     r3,ShushID     
     cmp     r3,r2               
     beq     CheckAllegiance     
     b       End                 @if the skill holder is in neither struct, they aren't in battle and so we branch to the end
@@ -52,13 +52,13 @@ CheckAllegiance:
     cmp		r2,#0x40			@NPC phase byte for comparison
     ble		End    	            @if player unit, navigate to End
     cmp		r2,#0x80		    @enemy phase byte for comparison
-    bge		PoisonPoint         @if enemy unit, navigate to the skill
+    bge		Shush               @if enemy unit, navigate to the skill
     b       End                 @if it's the NPC turn
 
-PoisonPoint:
+Shush:
     mov     r7,r1               @copy the skill holder's enemy battle struct location into a free register so it isn't overwritten
     mov     r5,#0x30            @Lower order nibble is status, higher order nibble is status duration (the first number is the higher-order nibble, and the second is the lower-order nibble)
-    mov     r1,#0x1             @get the byte for poison
+    mov     r1,#0x3             @get the byte for silence
     mov     r3,#0x30            @get the status duration and set it to 3 turns            
     add     r6,r3,r1            @add the status duration and status effect together and store in r6 as r3 will be overwritten by GetUnitStruct
     ldrb    r0,[r7,#0xB]        @load the deployment ID byte of the enemy unit
@@ -76,4 +76,4 @@ End:
 
 .ltorg
 .align
-PoisonPointID:                  @refer to the value defined in the event file
+ShushID:                        @refer to the value defined in the event file

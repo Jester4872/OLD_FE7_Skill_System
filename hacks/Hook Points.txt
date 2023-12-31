@@ -95,6 +95,7 @@ BlackMagic
 Enrage
 Drowsy
 PoisonPoint
+Shush
 
 #293A0
 Dragonskin
