@@ -173,3 +173,4 @@ Dazzle
 
 #28FF4
 VengefulFighter
+BoldFighter

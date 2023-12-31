@@ -41,6 +41,7 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Axebreaker | +20 hit and avoid when facing axe users
 | Banditbreaker | Effective damage against brigands, pirates and berserkers
 | Black Magic | Inflict a random negative status on the enemy for 3 turns after battle
+| Bold Fighter | This unit doubles when attacking
 | Bowbreaker | +20 hit and avoid when facing bow users
 | Close Counter | The unit can counterattack at 1-1 range
 | Colossus | Skill % chance of tripling strength in combat
@@ -82,8 +83,8 @@ Skills can now have their target unit changed ust by editing the name defined in
 | Slow Burn | +1 hit and avoid each turn up to a maximum of 15
 | Sword Breaker | +20 hit and avoid when fighting sword users
 | Triangle Adapt | Doubles the effects of any triangle effects this unit gives and receives
-| Vantage | If attacked, this unit will attack first
-| Veneful Fighter | The unit attacks twice if they're defending
+| Vantage | If defending, this unit will attack first
+| Vengeful Fighter | The unit doubles if they're defending
 
 ### Additional Stuff
 
