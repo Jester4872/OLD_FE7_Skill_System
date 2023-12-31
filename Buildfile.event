@@ -180,5 +180,8 @@ MESSAGE installed NoGuard_
 //#include "Hacks/Skills/PreBattleSkills/BoldFighter/BoldFighter.event"                                  
 //MESSAGE installed BoldFighter_
 
-#include "Hacks/Skills/PostBattleSkills/Enrage/Enrage.event"                                  
-MESSAGE installed Enrage_
+//#include "Hacks/Skills/PostBattleSkills/Enrage/Enrage.event"                                  
+//MESSAGE installed Enrage_
+
+#include "Hacks/Skills/PostBattleSkills/Drowsy/Drowsy.event"                                  
+MESSAGE installed Drowsy_

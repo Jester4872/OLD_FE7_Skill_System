@@ -93,6 +93,7 @@ CloseCounter
 GrisleyWound
 BlackMagic
 Enrage
+Drowsy
 
 #293A0
 Dragonskin
